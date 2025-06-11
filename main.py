@@ -4,8 +4,12 @@ from typing import List, Tuple
 import os
 import requests
 import openai
+from mock_data import MOCK_RESPONSE
 
 app = FastAPI()
+
+# Determine whether to use mock data by default
+DEFAULT_MOCK = os.getenv("MOCK_ENABLED", "true").lower() == "true"
 
 class IssueKeyInput(BaseModel):
     issue_key: str
@@ -29,42 +33,7 @@ def fetch_issue_from_jira(issue_key: str) -> Tuple[str, List[str]]:
     acceptance_criteria = [line.strip("- ").strip() for line in acceptance_text.splitlines() if line.strip()]
     return user_story, acceptance_criteria
 
-MOCK_RESPONSE = '''{
-  "Scenarios": [
-    {
-      "Given": "a user is on the login page",
-      "When": "the user clicks on 'Forgot Password' and enters their registered phone number",
-      "Then": "an SMS with a reset link is sent to the user's phone"
-    },
-    {
-      "Given": "a user has received an SMS with a reset link",
-      "When": "the user clicks on the reset link within 10 minutes",
-      "Then": "the link is valid and the user is redirected to the password reset page"
-    },
-    {
-      "Given": "a user has received an SMS with a reset link",
-      "When": "the user clicks on the reset link after 10 minutes",
-      "Then": "the link is invalid and the user is shown an error message"
-    },
-    {
-      "Given": "a user is on the password reset page with a valid link",
-      "When": "the user enters a new password and confirms it",
-      "Then": "the password is successfully updated and the user is notified"
-    },
-    {
-      "Given": "a user is on the password reset page with a valid link",
-      "When": "the user enters a new password that does not meet the security criteria",
-      "Then": "the user is shown an error message indicating the password requirements"
-    },
-    {
-      "Given": "a user is on the password reset page with a valid link",
-      "When": "the user enters mismatched passwords in the new password and confirm password fields",
-      "Then": "the user is shown an error message indicating the passwords do not match"
-    }
-  ]
-}'''
-
-def generate_test_cases(user_story: str, acceptance_criteria: List[str], mock: bool = True) -> str:
+def generate_test_cases(user_story: str, acceptance_criteria: List[str], mock: bool = DEFAULT_MOCK) -> str:
     if mock:
         return MOCK_RESPONSE
     criteria_text = "\n".join(f"- {ac}" for ac in acceptance_criteria)
@@ -101,7 +70,7 @@ Each scenario should be concise and map to a single acceptance criterion or logi
     return response.choices[0].message.content.strip()
 
 @app.post("/generate-test-cases/")
-async def generate_cases(input_data: IssueKeyInput, mock: bool = True):
+async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
     user_story, acceptance_criteria = fetch_issue_from_jira(input_data.issue_key)
     test_cases = generate_test_cases(user_story, acceptance_criteria, mock=mock)
     return {"issue_key": input_data.issue_key, "generated_test_cases": test_cases}
