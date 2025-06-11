@@ -1,15 +1,33 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List
+from typing import List, Tuple
 import os
+import requests
 import openai
 
 app = FastAPI()
 
-class UserStoryInput(BaseModel):
+class IssueKeyInput(BaseModel):
     issue_key: str
-    user_story: str
-    acceptance_criteria: List[str]
+
+def fetch_issue_from_jira(issue_key: str) -> Tuple[str, List[str]]:
+    """Retrieve the issue description and acceptance criteria from JIRA."""
+    base_url = os.getenv("JIRA_BASE_URL")
+    username = os.getenv("JIRA_USERNAME")
+    api_token = os.getenv("JIRA_API_TOKEN")
+    if not base_url or not username or not api_token:
+        raise RuntimeError("JIRA credentials are not configured")
+
+    url = f"{base_url}/rest/api/2/issue/{issue_key}"
+    response = requests.get(url, auth=(username, api_token))
+    response.raise_for_status()
+    data = response.json()
+
+    user_story = data["fields"].get("description", "")
+    ac_field = os.getenv("JIRA_ACCEPTANCE_CRITERIA_FIELD", "customfield_12345")
+    acceptance_text = data["fields"].get(ac_field, "") or ""
+    acceptance_criteria = [line.strip("- ").strip() for line in acceptance_text.splitlines() if line.strip()]
+    return user_story, acceptance_criteria
 
 MOCK_RESPONSE = '''{
   "Scenarios": [
@@ -83,8 +101,9 @@ Each scenario should be concise and map to a single acceptance criterion or logi
     return response.choices[0].message.content.strip()
 
 @app.post("/generate-test-cases/")
-async def generate_cases(input_data: UserStoryInput, mock: bool = True):
-    test_cases = generate_test_cases(input_data.user_story, input_data.acceptance_criteria, mock=mock)
+async def generate_cases(input_data: IssueKeyInput, mock: bool = True):
+    user_story, acceptance_criteria = fetch_issue_from_jira(input_data.issue_key)
+    test_cases = generate_test_cases(user_story, acceptance_criteria, mock=mock)
     return {"issue_key": input_data.issue_key, "generated_test_cases": test_cases}
 
 @app.get("/health")
