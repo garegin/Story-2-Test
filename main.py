@@ -8,53 +8,15 @@ dotenv.load_dotenv()
 import requests
 import openai
 from mock_data import MOCK_RESPONSE
+from jira_service import fetch_issue_from_jira, add_comment_to_jira
+from confluence_service import add_event_to_confluence_calendar
+from models.jira_models import IssueKeyInput, JiraCommentInput
+from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
 
 app = FastAPI()
 
 # Determine whether to use mock data by default
 DEFAULT_MOCK = os.getenv("MOCK_ENABLED", "true").lower() == "true"
-
-class IssueKeyInput(BaseModel):
-    issue_key: str
-
-class JiraCommentInput(BaseModel):
-    issue_key: str
-    comment: str
-
-class ConfluenceEventInput(BaseModel):
-    calendar_id: str
-    title: str
-    start: str  # ISO format: "2025-06-12T10:00:00Z"
-    end: str    # ISO format: "2025-06-12T11:00:00Z"
-    description: str = ""
-
-class ConfluencePageCommentInput(BaseModel):
-    page_id: str
-    comment: str
-
-def fetch_issue_from_jira(issue_key: str) -> Tuple[str, List[str]]:
-    """Retrieve the issue description and acceptance criteria from JIRA."""
-    base_url = os.getenv("JIRA_BASE_URL")
-    api_token = os.getenv("JIRA_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("JIRA credentials are not configured")
-
-    url = f"{base_url}/rest/api/2/issue/{issue_key}"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Accept": "application/json"
-    }
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()
-    data = response.json()
-
-    user_story = data["fields"].get("description", "")
-    #ac_field = os.getenv("JIRA_ACCEPTANCE_CRITERIA_FIELD", "customfield_" \
-    #"" \
-    #"45")
-    #acceptance_text = data["fields"].get(ac_field, "") or ""
-    #acceptance_criteria = [line.strip("- ").strip() for line in acceptance_text.splitlines() if line.strip()]
-    return user_story
 
 def generate_test_cases(user_story: str, mock: bool = DEFAULT_MOCK) -> str:
     if mock:
@@ -87,23 +49,6 @@ Each scenario should be concise and map to a single acceptance criterion or logi
         temperature=0.2
     )
     return response.choices[0].message.content.strip()
-
-def add_comment_to_jira(issue_key: str, comment: str):
-    base_url = os.getenv("JIRA_BASE_URL")
-    api_token = os.getenv("JIRA_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("JIRA credentials are not configured")
-
-    url = f"{base_url}/rest/api/2/issue/{issue_key}/comment"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Accept": "application/json"
-    }
-    payload = {"body": comment}
-    response = requests.post(url, json=payload, headers=headers)
-    if not response.ok:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-    return response.json()
 
 def add_event_to_confluence_calendar(calendar_id: str, title: str, start: str, end: str, description: str = ""):
     base_url = os.getenv("CONFLUENCE_BASE_URL")
