@@ -9,7 +9,13 @@ import requests
 import openai
 from mock_data import MOCK_RESPONSE
 from jira_service import fetch_issue_from_jira, add_comment_to_jira
-from confluence_service import add_event_to_confluence_calendar
+
+from confluence_service import add_event_to_calendar as add_event_to_calendar
+from confluence_service import get_confluence_page as get_confluence_page
+from confluence_service import list_confluence_calendars
+from confluence_service import add_comment_to_confluence_page
+from confluence_service import get_confluence_page_comments
+
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
 
@@ -19,6 +25,9 @@ app = FastAPI()
 DEFAULT_MOCK = os.getenv("MOCK_ENABLED", "true").lower() == "true"
 
 def generate_test_cases(user_story: str, mock: bool = DEFAULT_MOCK) -> str:
+    """
+    Generate test cases for a given user story using OpenAI or mock data.
+    """
     if mock:
         return MOCK_RESPONSE
     prompt = f"""
@@ -50,107 +59,16 @@ Each scenario should be concise and map to a single acceptance criterion or logi
     )
     return response.choices[0].message.content.strip()
 
-def add_event_to_confluence_calendar(calendar_id: str, title: str, start: str, end: str, description: str = ""):
-    base_url = os.getenv("CONFLUENCE_BASE_URL")
-    api_token = os.getenv("CONFLUENCE_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("Confluence credentials are not configured")
 
-    url = f"{base_url}/rest/calendar-services/1.0/calendar/events.json?calendarId={calendar_id}"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    }
-    payload = {
-        "title": title,
-        "start": start,
-        "end": end,
-        "description": description,
-        "type": "event"  # or "custom" depending on your calendar setup
-    }
-    response = requests.post(url, json=payload, headers=headers)
-    if not response.ok:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-    return response.json()
 
-def list_confluence_calendars():
-    base_url = os.getenv("CONFLUENCE_BASE_URL")
-    api_token = os.getenv("CONFLUENCE_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("Confluence credentials are not configured")
 
-    url = f"{base_url}/rest/calendar-services/1.0/calendar/subcalendars.json"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Accept": "application/json"
-    }
-    response = requests.get(url, headers=headers)
-    if not response.ok:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-    return response.json()
 
-def get_confluence_page(page_id: str):
-    base_url = os.getenv("CONFLUENCE_BASE_URL")
-    api_token = os.getenv("CONFLUENCE_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("Confluence credentials are not configured")
-
-    url = f"{base_url}/rest/api/content/{page_id}?expand=body.storage"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Accept": "application/json"
-    }
-    response = requests.get(url, headers=headers)
-    if not response.ok:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-    return response.json()
-
-def add_comment_to_confluence_page(page_id: str, comment: str):
-    base_url = os.getenv("CONFLUENCE_BASE_URL")
-    api_token = os.getenv("CONFLUENCE_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("Confluence credentials are not configured")
-
-    url = f"{base_url}/rest/api/content/{page_id}/child/comment"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    }
-    payload = {
-        "type": "comment",
-        "container": {"id": page_id, "type": "page"},
-        "body": {
-            "storage": {
-                "value": comment,
-                "representation": "storage"
-            }
-        }
-    }
-    response = requests.post(url, json=payload, headers=headers)
-    if not response.ok:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-    return response.json()
-
-def get_confluence_page_comments(page_id: str):
-    base_url = os.getenv("CONFLUENCE_BASE_URL")
-    api_token = os.getenv("CONFLUENCE_API_TOKEN")
-    if not base_url or not api_token:
-        raise RuntimeError("Confluence credentials are not configured")
-
-    url = f"{base_url}/rest/api/content/{page_id}/child/comment"
-    headers = {
-        "Authorization": f"Bearer {api_token}",
-        "Accept": "application/json"
-    }
-    response = requests.get(url, headers=headers)
-    if not response.ok:
-        raise HTTPException(status_code=response.status_code, detail=response.text)
-    return response.json()
 
 @app.post("/generate-test-cases/")
 async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
+    """
+    Generate test cases for a JIRA issue and add them as a comment to the issue.
+    """
     user_story = fetch_issue_from_jira(input_data.issue_key)
     test_cases = generate_test_cases(user_story, mock=mock)
     result = add_comment_to_jira(input_data.issue_key, test_cases)
@@ -159,18 +77,19 @@ async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
 
 @app.post("/add-comment/")
 async def add_comment(input_data: JiraCommentInput):
+    """
+    Add a comment to a JIRA issue.
+    """
     result = add_comment_to_jira(input_data.issue_key, input_data.comment)
     return {"issue_key": input_data.issue_key, "comment_added": True, "jira_response": result}
 
 @app.post("/confluence/add-event/")
 async def confluence_add_event(event: ConfluenceEventInput):
-    result = add_event_to_confluence_calendar(
-        event.calendar_id,
-        event.title,
-        event.start,
-        event.end,
-        event.description
-    )
+    """
+    Add an event to a Confluence Team Calendar.
+    """
+    result = add_event_to_calendar(event)
+        
     return {"calendar_id": event.calendar_id, "event_added": True, "confluence_response": result}
 
 @app.get("/confluence/calendars/")
@@ -183,23 +102,32 @@ async def get_confluence_calendars():
 
 @app.get("/health")
 def health_check():
+    """
+    Health check endpoint.
+    """
     return {"status": "ok"}
 
 @app.get("/confluence/page/{page_id}")
 async def confluence_get_page(page_id: str):
-    """Get a Confluence page by its ID."""
+    """
+    Get a Confluence page by its ID.
+    """
     page = get_confluence_page(page_id)
     return {"page": page}
 
 @app.post("/confluence/page/comment/")
 async def confluence_add_page_comment(input_data: ConfluencePageCommentInput):
-    """Add a comment to a Confluence page."""
+    """
+    Add a comment to a Confluence page.
+    """
     result = add_comment_to_confluence_page(input_data.page_id, input_data.comment)
     return {"page_id": input_data.page_id, "comment_added": True, "confluence_response": result}
 
 @app.get("/confluence/page/{page_id}/comments")
 async def confluence_get_page_comments(page_id: str):
-    """Get all comments for a Confluence page."""
+    """
+    Get all comments for a Confluence page.
+    """
     data = get_confluence_page_comments(page_id)
     comments = []
     for result in data.get("results", []):
