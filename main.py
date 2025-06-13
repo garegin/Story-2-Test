@@ -101,11 +101,35 @@ async def get_confluence_calendars():
     return {"calendars": calendars}
 
 @app.get("/health")
-def health_check():
+async def health_check():
     """
     Health check endpoint.
+    Checks FastAPI app status and optionally verifies connectivity to external services.
     """
-    return {"status": "ok"}
+    # Basic health check
+    health = {"status": "ok"}
+
+    # Optionally, check connectivity to JIRA
+    try:
+        # This could be a lightweight call, e.g., fetch a known issue or call a JIRA ping endpoint
+        # For demonstration, just set to True
+        fetch_issue_from_jira("ITG-200")
+        health["jira"] = "ok"
+    except Exception:
+        health["jira"] = "unreachable"
+
+    # Optionally, check connectivity to Confluence
+    try:
+        get_confluence_page("245956632")  
+        # This could be a lightweight call, e.g., list calendars or get a known page
+        health["confluence"] = "ok"
+    except Exception:
+        health["confluence"] = "unreachable"
+
+    # Optionally, check OpenAI API key presence
+    health["openai_api_key"] = bool(os.getenv("OPENAI_API_KEY"))
+
+    return health
 
 @app.get("/confluence/page/{page_id}")
 async def confluence_get_page(page_id: str):
