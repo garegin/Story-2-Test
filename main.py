@@ -10,11 +10,12 @@ import openai
 from mock_data import MOCK_RESPONSE
 from jira_service import fetch_issue_from_jira, add_comment_to_jira
 
-from confluence_service import add_event_to_calendar as add_event_to_calendar
+from confluence_service import add_event_to_calendar 
 from confluence_service import get_confluence_page as get_confluence_page
 from confluence_service import list_confluence_calendars
 from confluence_service import add_comment_to_confluence_page
 from confluence_service import get_confluence_page_comments
+from confluence_service import get_confluence_footer_comments
 
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
@@ -120,7 +121,7 @@ async def health_check():
 
     # Optionally, check connectivity to Confluence
     try:
-        get_confluence_page("245956632")  
+        get_confluence_page("185074375")  
         # This could be a lightweight call, e.g., list calendars or get a known page
         health["confluence"] = "ok"
     except Exception:
@@ -144,6 +145,7 @@ async def confluence_add_page_comment(input_data: ConfluencePageCommentInput):
     """
     Add a comment to a Confluence page.
     """
+    #return {"page_id": input_data.page_id, "comment": input_data.comment}
     result = add_comment_to_confluence_page(input_data.page_id, input_data.comment)
     return {"page_id": input_data.page_id, "comment_added": True, "confluence_response": result}
 
@@ -153,6 +155,23 @@ async def confluence_get_page_comments(page_id: str):
     Get all comments for a Confluence page.
     """
     data = get_confluence_page_comments(page_id)
+    comments = []
+    for result in data.get("results", []):
+        comments.append({
+            "id": result.get("id"),
+            "author": result.get("creator", {}).get("displayName"),
+            "content": result.get("body", {}).get("storage", {}).get("value")
+        })
+    return {"page_id": page_id, "comments": comments}
+
+
+
+@app.get("/confluence/footer/{page_id}/comments")
+async def confluence_get_page_comments(page_id: str):
+    """
+    Get all comments for a Confluence page.
+    """
+    data = get_confluence_footer_comments(page_id)
     comments = []
     for result in data.get("results", []):
         comments.append({
