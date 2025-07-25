@@ -19,6 +19,7 @@ from confluence_service import get_confluence_footer_comments
 
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
+from ollama_service import  ollama_generate_prompt, ollama_healthcheck 
 
 app = FastAPI()
 
@@ -60,6 +61,29 @@ Each scenario should be concise and map to a single acceptance criterion or logi
     )
     return response.choices[0].message.content.strip()
 
+def generate_test_cases_ollama(user_story: str) -> str:
+    """
+    Generate test cases for a given user story using Ollama llama3:8b model.
+    """
+    prompt = f"""
+You are a QA engineer assistant.
+
+User Story and Acceptance Criteria:
+{user_story}
+
+Task:
+Generate test cases in JSON format for the user story and acceptance criteria. 
+The output JSON should look like this:
+{{
+  "Scenarios": [
+    {{"Given": "...", "When": "...", "Then": "..."}},
+    ...
+  ]
+}}
+Each scenario should be concise and map to a single acceptance criterion or logical test path.
+"""
+    return ollama_generate_prompt(prompt)
+
 
 
 
@@ -71,7 +95,8 @@ async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
     Generate test cases for a JIRA issue and add them as a comment to the issue.
     """
     user_story = fetch_issue_from_jira(input_data.issue_key)
-    test_cases = generate_test_cases(user_story, mock=mock)
+    #test_cases = generate_test_cases(user_story, mock=mock)
+    test_cases = generate_test_cases_ollama(user_story)
     result = add_comment_to_jira(input_data.issue_key, test_cases)
     #add test trail 
     return {"issue_key": input_data.issue_key, "action":result, "generated_test_cases": test_cases}
@@ -129,6 +154,14 @@ async def health_check():
 
     # Optionally, check OpenAI API key presence
     health["openai_api_key"] = bool(os.getenv("OPENAI_API_KEY"))
+
+    try:
+        # Check Ollama API health
+        ollama_status = ollama_healthcheck()
+        health["ollama"] = "ok" if ollama_status else "unreachable"
+    except Exception:
+        health["ollama"] = "unreachable"
+
 
     return health
 
