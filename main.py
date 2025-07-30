@@ -20,6 +20,7 @@ from confluence_service import get_confluence_footer_comments
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
 from ollama_service import  ollama_generate_prompt, ollama_healthcheck 
+from testrail_service import post_test_case_to_testrail
 
 app = FastAPI()
 
@@ -83,11 +84,6 @@ The output JSON should look like this:
 Each scenario should be concise and map to a single acceptance criterion or logical test path.
 """
     return ollama_generate_prompt(prompt)
-
-
-
-
-
 
 @app.post("/generate-test-cases/")
 async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
@@ -229,3 +225,22 @@ def chat(req: PromptRequest):
         }
     )
     return response.json()
+
+class TestRailCaseInput(BaseModel):
+    project_id: int
+    suite_id: int
+    title: str
+    steps: str
+
+@app.post("/testrail/add-case/")
+async def testrail_add_case(input_data: TestRailCaseInput):
+    """
+    Add a mock test case to TestRail.
+    """
+    result = post_test_case_to_testrail(
+        input_data.project_id,
+        input_data.suite_id,
+        input_data.title,
+        input_data.steps
+    )
+    return {"testrail_response": result}
