@@ -213,3 +213,19 @@ async def confluence_get_page_comments(page_id: str):
             "content": result.get("body", {}).get("storage", {}).get("value")
         })
     return {"page_id": page_id, "comments": comments}
+
+class PromptRequest(BaseModel):
+    prompt: str
+    model: str = "llama3:8b"  # Default model
+
+@app.post("/chat")
+def chat(req: PromptRequest):
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": req.model,
+            "prompt": req.prompt,
+            "stream": False
+        }
+    )
+    return response.json()
