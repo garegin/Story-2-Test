@@ -1,0 +1,746 @@
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:The prompt: 
+You are a QA engineer assistant.
+
+User Story and Acceptance Criteria:
+For the investigation llama3 was deployed on local laptop using Ollama.
+
+Within this Story, we must deploy model on the server, which will be purchased for this project.
+
+ 
+
+*User Story:*
+
+As a User, I want to deploy model on the new purchased server locally, so I can use the model locally without providing confidential data to any 3rd party cloud.
+
+ 
+
+*Acceptance Criteria:*
+
+1.Install needed OS on the server,
+
+2. Ensure connection and accessibility to Jira server,
+
+3. Ensure python is installed and running properly, so that Fast API will work
+
+4. Download needed LLM model and install
+
+Task:
+Generate test cases in JSON format for the user story and acceptance criteria. 
+The output JSON should look like this:
+{
+  "Scenarios": [
+    {"Given": "...", "When": "...", "Then": "..."},
+    ...
+  ]
+}
+Each scenario should be concise and map to a single acceptance criterion or logical test path.
+
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:The prompt: 
+You are a QA engineer assistant.
+
+User Story and Acceptance Criteria:
+For the investigation llama3 was deployed on local laptop using Ollama.
+
+Within this Story, we must deploy model on the server, which will be purchased for this project.
+
+ 
+
+*User Story:*
+
+As a User, I want to deploy model on the new purchased server locally, so I can use the model locally without providing confidential data to any 3rd party cloud.
+
+ 
+
+*Acceptance Criteria:*
+
+1.Install needed OS on the server,
+
+2. Ensure connection and accessibility to Jira server,
+
+3. Ensure python is installed and running properly, so that Fast API will work
+
+4. Download needed LLM model and install
+
+Task:
+Generate test cases in JSON format for the user story and acceptance criteria. 
+The output JSON should look like this:
+{
+  "Scenarios": [
+    {"Given": "...", "When": "...", "Then": "..."},
+    ...
+  ]
+}
+Each scenario should be concise and map to a single acceptance criterion or logical test path.
+
+INFO:main:The test_cases: <Response [200]>
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:The prompt: 
+You are a QA engineer assistant.
+
+User Story and Acceptance Criteria:
+For the investigation llama3 was deployed on local laptop using Ollama.
+
+Within this Story, we must deploy model on the server, which will be purchased for this project.
+
+ 
+
+*User Story:*
+
+As a User, I want to deploy model on the new purchased server locally, so I can use the model locally without providing confidential data to any 3rd party cloud.
+
+ 
+
+*Acceptance Criteria:*
+
+1.Install needed OS on the server,
+
+2. Ensure connection and accessibility to Jira server,
+
+3. Ensure python is installed and running properly, so that Fast API will work
+
+4. Download needed LLM model and install
+
+Task:
+Generate test cases in JSON format for the user story and acceptance criteria. 
+The output JSON should look like this:
+{
+  "Scenarios": [
+    {"Given": "...", "When": "...", "Then": "..."},
+    ...
+  ]
+}
+Each scenario should be concise and map to a single acceptance criterion or logical test path.
+
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:main:The test_cases: {'model': 'llama3:8b', 'created_at': '2025-08-04T10:49:46.329132322Z', 'response': 'Here are the generated test cases in JSON format for the user story and acceptance criteria:\n\n```\n{\n  "Scenarios": [\n    {\n      "Given": "The server is purchased and set up with the necessary OS",\n      "When": "I attempt to install the needed OS on the server",\n      "Then": "The installation is successful and the OS is properly installed"\n    },\n    {\n      "Given": "The server has the necessary OS installed",\n      "When": "I try to connect to the Jira server from the new server",\n      "Then": "The connection to the Jira server is established successfully"\n    },\n    {\n      "Given": "The server has the necessary OS and Jira connection established",\n      "When": "I attempt to install Python on the server",\n      "Then": "Python is installed correctly and running properly, allowing Fast API to work"\n    },\n    {\n      "Given": "The server has the necessary OS, Jira connection established, and Python installed",\n      "When": "I download the LLM model and try to install it",\n      "Then": "The LLM model is successfully downloaded and installed on the server"\n    }\n  ]\n}\n```\n\nNote that each scenario maps to a single acceptance criterion or logical test path, as requested. Let me know if you have any further questions or need any modifications!', 'done': True, 'done_reason': 'stop', 'context': [128006, 882, 128007, 1432, 2675, 527, 264, 67008, 24490, 18328, 382, 1502, 15457, 323, 21496, 685, 14577, 512, 2520, 279, 8990, 94776, 18, 574, 27167, 389, 2254, 21288, 1701, 507, 657, 3105, 18304, 43061, 420, 15457, 11, 584, 2011, 10739, 1646, 389, 279, 3622, 11, 902, 690, 387, 15075, 369, 420, 2447, 18304, 4194, 881, 9, 1502, 15457, 54486, 881, 2170, 264, 2724, 11, 358, 1390, 311, 10739, 1646, 389, 279, 502, 15075, 3622, 24392, 11, 779, 358, 649, 1005, 279, 1646, 24392, 2085, 8405, 27285, 828, 311, 904, 220, 18, 6634, 4717, 9624, 18304, 4194, 881, 9, 17059, 685, 14577, 54486, 881, 16, 72307, 543, 4460, 10293, 389, 279, 3622, 49846, 17, 13, 30379, 3717, 323, 40800, 311, 622, 9008, 3622, 49846, 18, 13, 30379, 10344, 374, 10487, 323, 4401, 10489, 11, 779, 430, 17737, 5446, 690, 990, 881, 19, 13, 8745, 4460, 445, 11237, 1646, 323, 4685, 271, 6396, 512, 32215, 1296, 5157, 304, 4823, 3645, 369, 279, 1217, 3446, 323, 26586, 13186, 13, 720, 791, 2612, 4823, 1288, 1427, 1093, 420, 512, 517, 220, 330, 3407, 61594, 794, 2330, 262, 5324, 22818, 794, 39813, 498, 330, 4599, 794, 39813, 498, 330, 12487, 794, 39813, 7260, 262, 12515, 220, 5243, 534, 4959, 15398, 1288, 387, 64694, 323, 2472, 311, 264, 3254, 26586, 37057, 477, 20406, 1296, 1853, 627, 128009, 128006, 78191, 128007, 271, 8586, 527, 279, 8066, 1296, 5157, 304, 4823, 3645, 369, 279, 1217, 3446, 323, 26586, 13186, 1473, 14196, 4077, 517, 220, 330, 3407, 61594, 794, 2330, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 374, 15075, 323, 743, 709, 449, 279, 5995, 10293, 761, 415, 330, 4599, 794, 330, 40, 4879, 311, 4685, 279, 4460, 10293, 389, 279, 3622, 761, 415, 330, 12487, 794, 330, 791, 14028, 374, 6992, 323, 279, 10293, 374, 10489, 10487, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 279, 5995, 10293, 10487, 761, 415, 330, 4599, 794, 330, 40, 1456, 311, 4667, 311, 279, 622, 9008, 3622, 505, 279, 502, 3622, 761, 415, 330, 12487, 794, 330, 791, 3717, 311, 279, 622, 9008, 3622, 374, 9749, 7946, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 279, 5995, 10293, 323, 622, 9008, 3717, 9749, 761, 415, 330, 4599, 794, 330, 40, 4879, 311, 4685, 13325, 389, 279, 3622, 761, 415, 330, 12487, 794, 330, 31380, 374, 10487, 12722, 323, 4401, 10489, 11, 10923, 17737, 5446, 311, 990, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 279, 5995, 10293, 11, 622, 9008, 3717, 9749, 11, 323, 13325, 10487, 761, 415, 330, 4599, 794, 330, 40, 4232, 279, 445, 11237, 1646, 323, 1456, 311, 4685, 433, 761, 415, 330, 12487, 794, 330, 791, 445, 11237, 1646, 374, 7946, 24174, 323, 10487, 389, 279, 3622, 702, 262, 457, 220, 5243, 534, 14196, 19884, 9290, 430, 1855, 15398, 14370, 311, 264, 3254, 26586, 37057, 477, 20406, 1296, 1853, 11, 439, 11472, 13, 6914, 757, 1440, 422, 499, 617, 904, 4726, 4860, 477, 1205, 904, 29882, 0], 'total_duration': 1473015102, 'load_duration': 50034767, 'prompt_eval_count': 226, 'prompt_eval_duration': 13532197, 'eval_count': 283, 'eval_duration': 1408994628}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:main:The test_cases: {'model': 'llama3:8b', 'created_at': '2025-08-04T10:51:41.381384224Z', 'response': 'Here are the generated test cases in JSON format for the user story and acceptance criteria:\n\n{\n  "Scenarios": [\n    {\n      "Given": "A new server is purchased for this project",\n      "When": "The needed OS is installed on the server",\n      "Then": "The server is configured with the correct operating system"\n    },\n    {\n      "Given": "The server has been configured with the correct OS",\n      "When": "Jira connection and accessibility are ensured",\n      "Then": "The Jira server can be reached from the new server"\n    },\n    {\n      "Given": "The server has been configured with the correct OS and Jira connectivity",\n      "When": "Python is installed and running properly on the server",\n      "Then": "Fast API can be used without errors"\n    },\n    {\n      "Given": "Python is installed and running properly on the server",\n      "When": "The needed LLM model is downloaded and installed",\n      "Then": "The LLM model is successfully deployed and ready for use"\n    }\n  ]\n}\n\nLet me know if you\'d like me to make any changes or adjustments!', 'done': True, 'done_reason': 'stop', 'context': [128006, 882, 128007, 1432, 2675, 527, 264, 67008, 24490, 18328, 382, 1502, 15457, 323, 21496, 685, 14577, 512, 2520, 279, 8990, 94776, 18, 574, 27167, 389, 2254, 21288, 1701, 507, 657, 3105, 18304, 43061, 420, 15457, 11, 584, 2011, 10739, 1646, 389, 279, 3622, 11, 902, 690, 387, 15075, 369, 420, 2447, 18304, 4194, 881, 9, 1502, 15457, 54486, 881, 2170, 264, 2724, 11, 358, 1390, 311, 10739, 1646, 389, 279, 502, 15075, 3622, 24392, 11, 779, 358, 649, 1005, 279, 1646, 24392, 2085, 8405, 27285, 828, 311, 904, 220, 18, 6634, 4717, 9624, 18304, 4194, 881, 9, 17059, 685, 14577, 54486, 881, 16, 72307, 543, 4460, 10293, 389, 279, 3622, 49846, 17, 13, 30379, 3717, 323, 40800, 311, 622, 9008, 3622, 49846, 18, 13, 30379, 10344, 374, 10487, 323, 4401, 10489, 11, 779, 430, 17737, 5446, 690, 990, 881, 19, 13, 8745, 4460, 445, 11237, 1646, 323, 4685, 271, 6396, 512, 32215, 1296, 5157, 304, 4823, 3645, 369, 279, 1217, 3446, 323, 26586, 13186, 13, 720, 791, 2612, 4823, 1288, 1427, 1093, 420, 512, 517, 220, 330, 3407, 61594, 794, 2330, 262, 5324, 22818, 794, 39813, 498, 330, 4599, 794, 39813, 498, 330, 12487, 794, 39813, 7260, 262, 12515, 220, 5243, 534, 4959, 15398, 1288, 387, 64694, 323, 2472, 311, 264, 3254, 26586, 37057, 477, 20406, 1296, 1853, 627, 128009, 128006, 78191, 128007, 271, 8586, 527, 279, 8066, 1296, 5157, 304, 4823, 3645, 369, 279, 1217, 3446, 323, 26586, 13186, 1473, 517, 220, 330, 3407, 61594, 794, 2330, 262, 341, 415, 330, 22818, 794, 330, 32, 502, 3622, 374, 15075, 369, 420, 2447, 761, 415, 330, 4599, 794, 330, 791, 4460, 10293, 374, 10487, 389, 279, 3622, 761, 415, 330, 12487, 794, 330, 791, 3622, 374, 20336, 449, 279, 4495, 10565, 1887, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 1027, 20336, 449, 279, 4495, 10293, 761, 415, 330, 4599, 794, 330, 41, 9008, 3717, 323, 40800, 527, 59754, 761, 415, 330, 12487, 794, 330, 791, 622, 9008, 3622, 649, 387, 8813, 505, 279, 502, 3622, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 1027, 20336, 449, 279, 4495, 10293, 323, 622, 9008, 31357, 761, 415, 330, 4599, 794, 330, 31380, 374, 10487, 323, 4401, 10489, 389, 279, 3622, 761, 415, 330, 12487, 794, 330, 33274, 5446, 649, 387, 1511, 2085, 6103, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 31380, 374, 10487, 323, 4401, 10489, 389, 279, 3622, 761, 415, 330, 4599, 794, 330, 791, 4460, 445, 11237, 1646, 374, 24174, 323, 10487, 761, 415, 330, 12487, 794, 330, 791, 445, 11237, 1646, 374, 7946, 27167, 323, 5644, 369, 1005, 702, 262, 457, 220, 5243, 633, 10267, 757, 1440, 422, 499, 4265, 1093, 757, 311, 1304, 904, 4442, 477, 34074, 0], 'total_duration': 1213782290, 'load_duration': 21117635, 'prompt_eval_count': 226, 'prompt_eval_duration': 12474923, 'eval_count': 241, 'eval_duration': 1179836463}
+INFO:main:The test_cases: {'model': 'llama3:8b', 'created_at': '2025-08-04T10:52:45.484151329Z', 'response': 'Here are the test cases in JSON format for the user story and acceptance criteria:\n\n```\n{\n  "Scenarios": [\n    {\n      "Given": "The new server is purchased and powered on",\n      "When": "I install the needed OS on the server",\n      "Then": "The server should be running with the installed OS"\n    },\n    {\n      "Given": "The server has the installed OS",\n      "When": "I attempt to connect to Jira server from the new server",\n      "Then": "I expect the connection to be successful and I can access Jira server"\n    },\n    {\n      "Given": "The server has the installed OS and connected to Jira server",\n      "When": "I install Python on the server",\n      "Then": "Python should be installed and running properly, allowing Fast API to work"\n    },\n    {\n      "Given": "The server has the installed OS, connected to Jira server, and Python is installed",\n      "When": "I download the needed LLM model and attempt to install it",\n      "Then": "The LLM model should be successfully downloaded and installed on the server"\n    }\n  ]\n}\n```\n\nThese test cases cover each of the acceptance criteria outlined in the user story. Each scenario is concise and maps to a single acceptance criterion or logical test path.', 'done': True, 'done_reason': 'stop', 'context': [128006, 882, 128007, 1432, 2675, 527, 264, 67008, 24490, 18328, 382, 1502, 15457, 323, 21496, 685, 14577, 512, 2520, 279, 8990, 94776, 18, 574, 27167, 389, 2254, 21288, 1701, 507, 657, 3105, 18304, 43061, 420, 15457, 11, 584, 2011, 10739, 1646, 389, 279, 3622, 11, 902, 690, 387, 15075, 369, 420, 2447, 18304, 4194, 881, 9, 1502, 15457, 54486, 881, 2170, 264, 2724, 11, 358, 1390, 311, 10739, 1646, 389, 279, 502, 15075, 3622, 24392, 11, 779, 358, 649, 1005, 279, 1646, 24392, 2085, 8405, 27285, 828, 311, 904, 220, 18, 6634, 4717, 9624, 18304, 4194, 881, 9, 17059, 685, 14577, 54486, 881, 16, 72307, 543, 4460, 10293, 389, 279, 3622, 49846, 17, 13, 30379, 3717, 323, 40800, 311, 622, 9008, 3622, 49846, 18, 13, 30379, 10344, 374, 10487, 323, 4401, 10489, 11, 779, 430, 17737, 5446, 690, 990, 881, 19, 13, 8745, 4460, 445, 11237, 1646, 323, 4685, 271, 6396, 512, 32215, 1296, 5157, 304, 4823, 3645, 369, 279, 1217, 3446, 323, 26586, 13186, 13, 720, 791, 2612, 4823, 1288, 1427, 1093, 420, 512, 517, 220, 330, 3407, 61594, 794, 2330, 262, 5324, 22818, 794, 39813, 498, 330, 4599, 794, 39813, 498, 330, 12487, 794, 39813, 7260, 262, 12515, 220, 5243, 534, 4959, 15398, 1288, 387, 64694, 323, 2472, 311, 264, 3254, 26586, 37057, 477, 20406, 1296, 1853, 627, 128009, 128006, 78191, 128007, 271, 8586, 527, 279, 1296, 5157, 304, 4823, 3645, 369, 279, 1217, 3446, 323, 26586, 13186, 1473, 14196, 4077, 517, 220, 330, 3407, 61594, 794, 2330, 262, 341, 415, 330, 22818, 794, 330, 791, 502, 3622, 374, 15075, 323, 23134, 389, 761, 415, 330, 4599, 794, 330, 40, 4685, 279, 4460, 10293, 389, 279, 3622, 761, 415, 330, 12487, 794, 330, 791, 3622, 1288, 387, 4401, 449, 279, 10487, 10293, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 279, 10487, 10293, 761, 415, 330, 4599, 794, 330, 40, 4879, 311, 4667, 311, 622, 9008, 3622, 505, 279, 502, 3622, 761, 415, 330, 12487, 794, 330, 40, 1755, 279, 3717, 311, 387, 6992, 323, 358, 649, 2680, 622, 9008, 3622, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 279, 10487, 10293, 323, 8599, 311, 622, 9008, 3622, 761, 415, 330, 4599, 794, 330, 40, 4685, 13325, 389, 279, 3622, 761, 415, 330, 12487, 794, 330, 31380, 1288, 387, 10487, 323, 4401, 10489, 11, 10923, 17737, 5446, 311, 990, 702, 262, 1173, 262, 341, 415, 330, 22818, 794, 330, 791, 3622, 706, 279, 10487, 10293, 11, 8599, 311, 622, 9008, 3622, 11, 323, 13325, 374, 10487, 761, 415, 330, 4599, 794, 330, 40, 4232, 279, 4460, 445, 11237, 1646, 323, 4879, 311, 4685, 433, 761, 415, 330, 12487, 794, 330, 791, 445, 11237, 1646, 1288, 387, 7946, 24174, 323, 10487, 389, 279, 3622, 702, 262, 457, 220, 5243, 534, 14196, 19884, 9673, 1296, 5157, 3504, 1855, 315, 279, 26586, 13186, 33740, 304, 279, 1217, 3446, 13, 9062, 15398, 374, 64694, 323, 14370, 311, 264, 3254, 26586, 37057, 477, 20406, 1296, 1853, 13], 'total_duration': 1412430455, 'load_duration': 33537595, 'prompt_eval_count': 226, 'prompt_eval_duration': 9412212, 'eval_count': 280, 'eval_duration': 1369028266}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:main:The test_cases: Here are the test cases in JSON format for the user story and acceptance criteria:
+
+```
+{
+  "Scenarios": [
+    {
+      "Given": "The new server is purchased and ready for deployment.",
+      "When": "I install the needed OS on the server.",
+      "Then": "The installation is successful and the OS is fully functional."
+    },
+    {
+      "Given": "The server has been installed with the necessary OS.",
+      "When": "I attempt to connect to the Jira server.",
+      "Then": "The connection is established successfully, and I can access the Jira server."
+    },
+    {
+      "Given": "The server has been set up with the correct OS and connectivity to Jira.",
+      "When": "I verify that Python is installed on the server.",
+      "Then": "Python is properly installed and running smoothly."
+    },
+    {
+      "Given": "The server has a functional OS, connectivity to Jira, and Python installation.",
+      "When": "I download and install the needed LLM model on the server.",
+      "Then": "The model is successfully downloaded and installed on the server."
+    }
+  ]
+}
+```
+
+Note that each scenario maps to a single acceptance criterion or logical test path.
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:main:{'self': 'https://service-desk.ameriabank.am/rest/api/2/issue/1420306/comment/2881666', 'id': '2881666', 'author': {'self': 'https://service-desk.ameriabank.am/rest/api/2/user?username=Garegin+Gyulasaryan', 'name': 'Garegin Gyulasaryan', 'key': 'JIRAUSER37104', 'emailAddress': 'Garegin.Gyulasaryan@ameriabank.am', 'avatarUrls': {'48x48': 'https://service-desk.ameriabank.am/secure/useravatar?ownerId=JIRAUSER37104&avatarId=37739', '24x24': 'https://service-desk.ameriabank.am/secure/useravatar?size=small&ownerId=JIRAUSER37104&avatarId=37739', '16x16': 'https://service-desk.ameriabank.am/secure/useravatar?size=xsmall&ownerId=JIRAUSER37104&avatarId=37739', '32x32': 'https://service-desk.ameriabank.am/secure/useravatar?size=medium&ownerId=JIRAUSER37104&avatarId=37739'}, 'displayName': 'Garegin Gyulasaryan', 'active': True, 'timeZone': 'Asia/Yerevan'}, 'body': 'Here are the generated test cases in JSON format:\n\n**Test Case 1: Install needed OS on the server**\n{\n  "title": "Install Operating System",\n  "custom_steps": "Purchase new server, install needed OS (e.g. Ubuntu)",\n  "custom_steps_separated": [\n    {\n      "content": "Purchase a new server for the project",\n      "expected": "Server is purchased and ready for use",\n      "additional_info": "",\n      "refs": ""\n    },\n    {\n      "content": "Install needed OS (e.g. Ubuntu) on the server",\n      "expected": "OS is installed correctly",\n      "additional_info": "",\n      "refs": ""\n    }\n  ],\n  "automation_type": 0\n}\n\n**Test Case 2: Ensure connection and accessibility to Jira server**\n{\n  "title": "Connect to Jira Server",\n  "custom_steps": "Set up network connection, test access to Jira",\n  "custom_steps_separated": [\n    {\n      "content": "Establish a network connection to the server",\n      "expected": "Server is connected to the internet",\n      "additional_info": "",\n      "refs": ""\n    },\n    {\n      "content": "Test access to Jira server from the server",\n      "expected": "Jira server is accessible and login successful",\n      "additional_info": "",\n      "refs": ""\n    }\n  ],\n  "automation_type": 0\n}\n\n**Test Case 3: Ensure python is installed and running properly**\n{\n  "title": "Install and Test Python",\n  "custom_steps": "Install Python, test execution of Fast API",\n  "custom_steps_separated": [\n    {\n      "content": "Install Python on the server",\n      "expected": "Python is installed correctly",\n      "additional_info": "",\n      "refs": ""\n    },\n    {\n      "content": "Test execution of Fast API using Python",\n      "expected": "Fast API executes successfully and returns expected output",\n      "additional_info": "",\n      "refs": ""\n    }\n  ],\n  "automation_type": 0\n}\n\n**Test Case 4: Download needed LLM model and install**\n{\n  "title": "Download and Install LLM Model",\n  "custom_steps": "Download LLM model, install on server",\n  "custom_steps_separated": [\n    {\n      "content": "Download the necessary LLM model from a trusted source",\n      "expected": "Model is downloaded correctly",\n      "additional_info": "",\n      "refs": ""\n    },\n    {\n      "content": "Install the LLM model on the server",\n      "expected": "Model is installed correctly and available for use",\n      "additional_info": "",\n      "refs": ""\n    }\n  ],\n  "automation_type": 0\n}\n\nLet me know if you need any further assistance!', 'updateAuthor': {'self': 'https://service-desk.ameriabank.am/rest/api/2/user?username=Garegin+Gyulasaryan', 'name': 'Garegin Gyulasaryan', 'key': 'JIRAUSER37104', 'emailAddress': 'Garegin.Gyulasaryan@ameriabank.am', 'avatarUrls': {'48x48': 'https://service-desk.ameriabank.am/secure/useravatar?ownerId=JIRAUSER37104&avatarId=37739', '24x24': 'https://service-desk.ameriabank.am/secure/useravatar?size=small&ownerId=JIRAUSER37104&avatarId=37739', '16x16': 'https://service-desk.ameriabank.am/secure/useravatar?size=xsmall&ownerId=JIRAUSER37104&avatarId=37739', '32x32': 'https://service-desk.ameriabank.am/secure/useravatar?size=medium&ownerId=JIRAUSER37104&avatarId=37739'}, 'displayName': 'Garegin Gyulasaryan', 'active': True, 'timeZone': 'Asia/Yerevan'}, 'created': '2025-08-04T15:49:10.321+0400', 'updated': '2025-08-04T15:49:10.321+0400'}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:main:For the investigation llama3 was deployed on local laptop using Ollama.
+
+Within this Story, we must deploy model on the server, which will be purchased for this project.
+
+ 
+
+*User Story:*
+
+As a User, I want to deploy model on the new purchased server locally, so I can use the model locally without providing confidential data to any 3rd party cloud.
+
+ 
+
+*Acceptance Criteria:*
+
+1.Install needed OS on the server,
+
+2. Ensure connection and accessibility to Jira server,
+
+3. Ensure python is installed and running properly, so that Fast API will work
+
+4. Download needed LLM model and install
+INFO:main:*User Story:*
+As a user, I want to make To Card Transfers in the mobile banking app, so that I can send money using the recipient's card number.
+*Acceptance Criteria:* * The system must allow To Card transfers only in AMD currency.
+ * The card number input field must accept exactly 16 digits.
+ * An error message must appear if the card number is less than or more than 16 digits.
+ * The minimum allowed amount is 1000 AMD.
+ * The maximum allowed amount is 2,000,000 AMD.
+ * The system must reject transfers from inactive cards.
+ * The system must confirm transaction details before execution.
+ * A success message must be displayed after a successful transfer.
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:main:The test_cases: Here are the generated test cases in JSON format:
+
+{
+  "title": "Allow To Card transfers only in AMD currency",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter incorrect currency, check error message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter incorrect currency",
+      "expected": "error message appears",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "check error message",
+      "expected": "error message indicates only AMD currency is allowed",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Card number input field accepts exactly 16 digits",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter correct card number with 16 digits, check success message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter correct card number with 16 digits",
+      "expected": "success message appears",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "An error message appears if the card number is less than or more than 16 digits",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter incorrect card number with fewer digits, check error message; Open mobile banking app, select To Card transfer option, enter incorrect card number with more digits, check error message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter incorrect card number with fewer digits",
+      "expected": "error message appears",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "check error message",
+      "expected": "error message indicates correct card number length is 16 digits",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter incorrect card number with more digits",
+      "expected": "error message appears",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "check error message",
+      "expected": "error message indicates correct card number length is 16 digits",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Minimum allowed amount is 1000 AMD",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter valid card number, enter minimum allowed amount, check success message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter valid card number",
+      "expected": "card number is accepted",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter minimum allowed amount",
+      "expected": "transfer is successful",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Maximum allowed amount is 2,000,000 AMD",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter valid card number, enter maximum allowed amount, check success message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter valid card number",
+      "expected": "card number is accepted",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter maximum allowed amount",
+      "expected": "transfer is successful",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "System rejects transfers from inactive cards",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter card number of inactive card, check error message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter card number of inactive card",
+      "expected": "error message appears",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "System confirms transaction details before execution",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter valid card number, confirm transaction details, check success message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter valid card number",
+      "expected": "card number is accepted",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "confirm transaction details",
+      "expected": "transaction confirmation message appears",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Success message is displayed after a successful transfer",
+  "custom_steps": "Open mobile banking app, select To Card transfer option, enter valid card number, confirm transaction details, check success message",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app",
+      "expected": "mobile banking app is opened",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "select To Card transfer option",
+      "expected": "To Card transfer option is selected",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "enter valid card number",
+      "expected": "card number is accepted",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "confirm transaction details",
+      "expected": "success message appears after transfer execution",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+INFO:main:The test_cases: Here are the generated test cases in JSON format:
+
+**Test Case 1: To Card Transfer with Correct Currency**
+{
+  "title": "To Card Transfer with Correct Currency",
+  "custom_steps": "Enter recipient's card number, select AMD as currency, enter amount within range",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's card number (16 digits)",
+      "expected": "No error message appears",
+      "additional_info": "",
+      "refs": ""
+    },
+    {
+      "content": "Select AMD as the transfer currency",
+      "expected": "Transfer is processed successfully",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 2: To Card Transfer with Incorrect Currency**
+{
+  "title": "To Card Transfer with Incorrect Currency",
+  "custom_steps": "Enter recipient's card number, select wrong currency, enter amount within range",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's card number (16 digits)",
+      "expected": "Error message appears saying 'Invalid currency'",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 3: To Card Transfer with Incorrect Card Number Length**
+{
+  "title": "To Card Transfer with Incorrect Card Number Length",
+  "custom_steps": "Enter recipient's card number (less than or more than 16 digits), enter amount within range",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's card number (less than or more than 16 digits)",
+      "expected": "Error message appears saying 'Invalid card number'",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 4: To Card Transfer with Amount Below Minimum**
+{
+  "title": "To Card Transfer with Amount Below Minimum",
+  "custom_steps": "Enter recipient's card number, enter amount below minimum (less than 1000 AMD), select currency",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's card number (16 digits)",
+      "expected": "Error message appears saying 'Amount must be at least 1000 AMD'",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 5: To Card Transfer with Amount Above Maximum**
+{
+  "title": "To Card Transfer with Amount Above Maximum",
+  "custom_steps": "Enter recipient's card number, enter amount above maximum (more than 2,000,000 AMD), select currency",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's card number (16 digits)",
+      "expected": "Error message appears saying 'Amount must be at most 2,000,000 AMD'",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 6: To Card Transfer with Inactive Card**
+{
+  "title": "To Card Transfer with Inactive Card",
+  "custom_steps": "Enter recipient's inactive card number, enter amount within range, select currency",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's inactive card number (16 digits)",
+      "expected": "Error message appears saying 'Card is inactive'",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 7: To Card Transfer with Successful Transaction**
+{
+  "title": "To Card Transfer with Successful Transaction",
+  "custom_steps": "Enter recipient's active card number, enter amount within range, select currency, confirm transaction details",
+  "custom_steps_separated": [
+    {
+      "content": "Enter recipient's active card number (16 digits)",
+      "expected": "Success message appears saying 'Transaction processed successfully'",
+      "additional_info": "",
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+Let me know if you need any further assistance!
+INFO:main:The test_cases: Here are the generated test cases in JSON format for the user story and acceptance criteria:
+
+**Test Case 1: To Card Transfer only in AMD currency**
+{
+  "title": "TC1 - To Card Transfer only in AMD currency",
+  "custom_steps": "Enter card number, select AMD as currency, click on transfer button",
+  "custom_steps_separated": [
+    {
+      "content": "Enter a valid 16-digit card number", 
+      "expected": "Transaction details should be displayed with AMD as the selected currency", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 2: Card number input field accepts exactly 16 digits**
+{
+  "title": "TC2 - Card number input field accepts exactly 16 digits",
+  "custom_steps": "Enter a card number with less than 16 digits, try to transfer money", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a card number with less than 16 digits", 
+      "expected": "Error message should appear indicating incorrect card number length", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter a card number with more than 16 digits", 
+      "expected": "Error message should appear indicating incorrect card number length", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 3: Error message appears if card number is less than or more than 16 digits**
+{
+  "title": "TC3 - Error message appears if card number is less than or more than 16 digits",
+  "custom_steps": "Enter a card number with less than 16 digits, try to transfer money", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a card number with less than 16 digits", 
+      "expected": "Error message should appear indicating incorrect card number length", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter a card number with more than 16 digits", 
+      "expected": "Error message should appear indicating incorrect card number length", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 4: Minimum allowed amount is 1000 AMD**
+{
+  "title": "TC4 - Minimum allowed amount is 1000 AMD",
+  "custom_steps": "Try to transfer less than 1000 AMD, click on transfer button", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a transfer amount less than 1000 AMD", 
+      "expected": "Error message should appear indicating minimum allowed amount not met", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 5: Maximum allowed amount is 2,000,000 AMD**
+{
+  "title": "TC5 - Maximum allowed amount is 2,000,000 AMD",
+  "custom_steps": "Try to transfer more than 2,000,000 AMD, click on transfer button", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a transfer amount greater than 2,000,000 AMD", 
+      "expected": "Error message should appear indicating maximum allowed amount exceeded", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 6: System rejects transfers from inactive cards**
+{
+  "title": "TC6 - System rejects transfers from inactive cards",
+  "custom_steps": "Try to transfer money using an inactive card, click on transfer button", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a valid but inactive card number", 
+      "expected": "Error message should appear indicating the card is inactive", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 7: System confirms transaction details before execution**
+{
+  "title": "TC7 - System confirms transaction details before execution",
+  "custom_steps": "Try to transfer money, click on confirm button", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a valid card number and transfer amount", 
+      "expected": "Transaction details should be displayed for confirmation", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 8: Success message is displayed after a successful transfer**
+{
+  "title": "TC8 - Success message is displayed after a successful transfer",
+  "custom_steps": "Try to transfer money, click on transfer button", 
+  "custom_steps_separated": [
+    {
+      "content": "Enter a valid card number and transfer amount", 
+      "expected": "Success message should be displayed indicating the transaction was successful", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+Let me know if you need any modifications or clarifications!

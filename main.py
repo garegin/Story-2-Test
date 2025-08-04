@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import List, Tuple
+from typing import List, Tuple, Optional
 import os
 import dotenv
 dotenv.load_dotenv()
@@ -19,8 +19,15 @@ from confluence_service import get_confluence_footer_comments
 
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
-from ollama_service import  ollama_generate_prompt, ollama_healthcheck 
+from ollama_service import  ollama_generate_prompt, ollama_healthcheck, generate_test_cases_ollama 
 from testrail_service import post_test_case_to_testrail
+from testrail_service import TestCasePayload
+from testrail_service import get_testrail_case
+from testrail_service import StepSeparated
+
+import logging
+logging.basicConfig(level=logging.INFO, filename="log.log")
+logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
@@ -62,28 +69,7 @@ Each scenario should be concise and map to a single acceptance criterion or logi
     )
     return response.choices[0].message.content.strip()
 
-def generate_test_cases_ollama(user_story: str) -> str:
-    """
-    Generate test cases for a given user story using Ollama llama3:8b model.
-    """
-    prompt = f"""
-You are a QA engineer assistant.
 
-User Story and Acceptance Criteria:
-{user_story}
-
-Task:
-Generate test cases in JSON format for the user story and acceptance criteria. 
-The output JSON should look like this:
-{{
-  "Scenarios": [
-    {{"Given": "...", "When": "...", "Then": "..."}},
-    ...
-  ]
-}}
-Each scenario should be concise and map to a single acceptance criterion or logical test path.
-"""
-    return ollama_generate_prompt(prompt)
 
 @app.post("/generate-test-cases/")
 async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
@@ -93,7 +79,11 @@ async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
     user_story = fetch_issue_from_jira(input_data.issue_key)
     #test_cases = generate_test_cases(user_story, mock=mock)
     test_cases = generate_test_cases_ollama(user_story)
+    
+    
+    logger.info(f"The test_cases: {test_cases}")
     result = add_comment_to_jira(input_data.issue_key, test_cases)
+    
     #add test trail 
     return {"issue_key": input_data.issue_key, "action":result, "generated_test_cases": test_cases}
 
@@ -216,31 +206,55 @@ class PromptRequest(BaseModel):
 
 @app.post("/chat")
 def chat(req: PromptRequest):
-    response = requests.post(
-        "http://localhost:11434/api/generate",
-        json={
-            "model": req.model,
-            "prompt": req.prompt,
-            "stream": False
-        }
-    )
+
+    response = ollama_generate_prompt(req.prompt, req.model)
+    
     return response.json()
 
 class TestRailCaseInput(BaseModel):
     project_id: int
     suite_id: int
+    section_id: int = None  
     title: str
-    steps: str
+    custom_steps: str
+    custom_steps_separated: Optional[List[StepSeparated]] = None
+    automation_type: int = 0
 
 @app.post("/testrail/add-case/")
 async def testrail_add_case(input_data: TestRailCaseInput):
     """
-    Add a mock test case to TestRail.
+    Add a test case to TestRail.
     """
-    result = post_test_case_to_testrail(
-        input_data.project_id,
-        input_data.suite_id,
-        input_data.title,
-        input_data.steps
+    Test = TestCasePayload(
+        project_id=input_data.project_id,
+        suite_id=input_data.suite_id,
+        section_id=input_data.section_id,
+        title=input_data.title,
+        custom_steps=input_data.custom_steps,
+        custom_steps_separated=input_data.custom_steps_separated,
+        automation_type=0
     )
-    return {"testrail_response": result}
+    try:
+        result = post_test_case_to_testrail(
+            Test
+        )
+        return {
+            "success": True,
+            "testrail_response": result,
+            "input": input_data.dict()
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to add test case to TestRail: {str(e)}")
+    
+
+
+@app.get("/testrail/get-case/{case_id}")
+async def testrail_get_case(case_id: int):
+    """
+    Get a test case from TestRail by its ID.
+    """
+    try:
+        response = get_testrail_case(case_id)
+        return {"case_id": case_id, "case_details": response}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get test case: {str(e)}")
