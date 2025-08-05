@@ -2680,3 +2680,417 @@ INFO:ollama_service:Output: {
 INFO:ollama_service:Extracted cases: [{'title': 'Transfer To Card in AMD', 'custom_steps': 'Enter card number, Enter amount', 'custom_steps_separated': [{'content': 'Enter exactly 16 digits for card number', 'expected': 'Transaction successful', 'additional_info': '', 'refs': ''}, {'content': 'Enter less than 16 digits for card number', 'expected': 'Error: Invalid card number', 'additional_info': '', 'refs': ''}, {'content': 'Enter more than 16 digits for card number', 'expected': 'Error: Invalid card number', 'additional_info': '', 'refs': ''}, {'content': 'Enter amount less than 1000 AMD', 'expected': 'Error: Minimum transfer amount not met', 'additional_info': '', 'refs': ''}, {'content': 'Enter amount more than 2000000 AMD', 'expected': 'Error: Maximum transfer amount exceeded', 'additional_info': '', 'refs': ''}, {'content': 'Transfer from inactive card', 'expected': 'Error: Card is inactive', 'additional_info': '', 'refs': ''}, {'content': 'Confirm transaction details', 'expected': 'Transaction confirmed', 'additional_info': '', 'refs': ''}, {'content': 'Successful transfer', 'expected': 'Transfer successful', 'additional_info': '', 'refs': ''}], 'automation_type': 0}]
 INFO:testrail_service:Test case added successfully: {'id': 54380, 'title': 'Transfer To Card in AMD', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754316668, 'updated_by': 1103, 'updated_on': 1754316668, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 9, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Enter exactly 16 digits for card number', 'expected': 'Transaction successful', 'additional_info': '', 'refs': ''}, {'content': 'Enter less than 16 digits for card number', 'expected': 'Error: Invalid card number', 'additional_info': '', 'refs': ''}, {'content': 'Enter more than 16 digits for card number', 'expected': 'Error: Invalid card number', 'additional_info': '', 'refs': ''}, {'content': 'Enter amount less than 1000 AMD', 'expected': 'Error: Minimum transfer amount not met', 'additional_info': '', 'refs': ''}, {'content': 'Enter amount more than 2000000 AMD', 'expected': 'Error: Maximum transfer amount exceeded', 'additional_info': '', 'refs': ''}, {'content': 'Transfer from inactive card', 'expected': 'Error: Card is inactive', 'additional_info': '', 'refs': ''}, {'content': 'Confirm transaction details', 'expected': 'Transaction confirmed', 'additional_info': '', 'refs': ''}, {'content': 'Successful transfer', 'expected': 'Transfer successful', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
 INFO:main:Generated test cases: {'id': 54380, 'title': 'Transfer To Card in AMD', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754316668, 'updated_by': 1103, 'updated_on': 1754316668, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 9, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Enter exactly 16 digits for card number', 'expected': 'Transaction successful', 'additional_info': '', 'refs': ''}, {'content': 'Enter less than 16 digits for card number', 'expected': 'Error: Invalid card number', 'additional_info': '', 'refs': ''}, {'content': 'Enter more than 16 digits for card number', 'expected': 'Error: Invalid card number', 'additional_info': '', 'refs': ''}, {'content': 'Enter amount less than 1000 AMD', 'expected': 'Error: Minimum transfer amount not met', 'additional_info': '', 'refs': ''}, {'content': 'Enter amount more than 2000000 AMD', 'expected': 'Error: Maximum transfer amount exceeded', 'additional_info': '', 'refs': ''}, {'content': 'Transfer from inactive card', 'expected': 'Error: Card is inactive', 'additional_info': '', 'refs': ''}, {'content': 'Confirm transaction details', 'expected': 'Transaction confirmed', 'additional_info': '', 'refs': ''}, {'content': 'Successful transfer', 'expected': 'Transfer successful', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Performing health check on Ollama API...
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Performing health check on Ollama API...
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Performing health check on Ollama API...
+INFO:ollama_service:Ollama healthcheck response: {'model': 'llama3:8b', 'created_at': '2025-08-05T05:32:05.796203871Z', 'response': 'Hello, World!', 'done': True, 'done_reason': 'stop', 'context': [128006, 882, 128007, 271, 37890, 24748, 311, 1917, 128009, 128006, 78191, 128007, 271, 9906, 11, 4435, 0], 'total_duration': 77618319, 'load_duration': 45280010, 'prompt_eval_count': 14, 'prompt_eval_duration': 8742545, 'eval_count': 5, 'eval_duration': 23205895}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Performing health check on Ollama API...
+INFO:ollama_service:Ollama healthcheck response: {'model': 'llama3:8b', 'created_at': '2025-08-05T05:32:43.207385005Z', 'response': 'Hello, World!', 'done': True, 'done_reason': 'stop', 'context': [128006, 882, 128007, 271, 37890, 24748, 311, 1917, 128009, 128006, 78191, 128007, 271, 9906, 11, 4435, 0], 'total_duration': 97106793, 'load_duration': 64054982, 'prompt_eval_count': 14, 'prompt_eval_duration': 9396161, 'eval_count': 5, 'eval_duration': 23333542}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Output: Here are the test cases in JSON format:
+
+{
+  "title": "Transfer in AMD currency",
+  "custom_steps": "Select To Card transfer, Enter 16-digit card number in AMD, Verify transaction details",
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter 16-digit card number in AMD", 
+      "expected": "Card number input field accepts exactly 16 digits", 
+      "additional_info": "Verify currency is AMD", 
+      "refs": ""
+    },
+    {
+      "content": "Verify transaction details", 
+      "expected": "Transaction details are confirmed before execution", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Card number input field accepts exactly 16 digits",
+  "custom_steps": "Select To Card transfer, Enter card number with less than 16 digits, Verify error message", 
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter card number with less than 16 digits", 
+      "expected": "Error message appears (less than or more than 16 digits)", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Card number input field accepts exactly 16 digits - invalid card",
+  "custom_steps": "Select To Card transfer, Enter card number with more than 16 digits, Verify error message", 
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter card number with more than 16 digits", 
+      "expected": "Error message appears (less than or more than 16 digits)", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Transfer amount is within limits",
+  "custom_steps": "Select To Card transfer, Enter valid transfer amount, Verify transaction details", 
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter valid transfer amount (1000-2000000 AMD)", 
+      "expected": "Transaction details are confirmed before execution", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Transfer amount is out of limits",
+  "custom_steps": "Select To Card transfer, Enter invalid transfer amount, Verify error message", 
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter invalid transfer amount (less than 1000 or more than 2000000 AMD)", 
+      "expected": "Error message appears (amount out of limits)", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Transfer from inactive card is rejected",
+  "custom_steps": "Select To Card transfer, Enter active card number, Verify error message", 
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter active card number", 
+      "expected": "Error message appears (transfer from inactive card rejected)", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "Successful transfer",
+  "custom_steps": "Select To Card transfer, Enter valid transfer details, Verify success message", 
+  "custom_steps_separated": [
+    {
+      "content": "Open mobile banking app", 
+      "expected": "Mobile banking app is opened", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select To Card transfer option", 
+      "expected": "To Card transfer option is selected", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter valid transfer details (card number, amount, etc.)", 
+      "expected": "Success message appears after successful transfer", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+INFO:ollama_service:Extracted cases: [{'title': 'Transfer in AMD currency', 'custom_steps': 'Select To Card transfer, Enter 16-digit card number in AMD, Verify transaction details', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter 16-digit card number in AMD', 'expected': 'Card number input field accepts exactly 16 digits', 'additional_info': 'Verify currency is AMD', 'refs': ''}, {'content': 'Verify transaction details', 'expected': 'Transaction details are confirmed before execution', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'Card number input field accepts exactly 16 digits', 'custom_steps': 'Select To Card transfer, Enter card number with less than 16 digits, Verify error message', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter card number with less than 16 digits', 'expected': 'Error message appears (less than or more than 16 digits)', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'Card number input field accepts exactly 16 digits - invalid card', 'custom_steps': 'Select To Card transfer, Enter card number with more than 16 digits, Verify error message', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter card number with more than 16 digits', 'expected': 'Error message appears (less than or more than 16 digits)', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'Transfer amount is within limits', 'custom_steps': 'Select To Card transfer, Enter valid transfer amount, Verify transaction details', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid transfer amount (1000-2000000 AMD)', 'expected': 'Transaction details are confirmed before execution', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'Transfer amount is out of limits', 'custom_steps': 'Select To Card transfer, Enter invalid transfer amount, Verify error message', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter invalid transfer amount (less than 1000 or more than 2000000 AMD)', 'expected': 'Error message appears (amount out of limits)', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'Transfer from inactive card is rejected', 'custom_steps': 'Select To Card transfer, Enter active card number, Verify error message', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter active card number', 'expected': 'Error message appears (transfer from inactive card rejected)', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'Successful transfer', 'custom_steps': 'Select To Card transfer, Enter valid transfer details, Verify success message', 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid transfer details (card number, amount, etc.)', 'expected': 'Success message appears after successful transfer', 'additional_info': '', 'refs': ''}], 'automation_type': 0}]
+INFO:testrail_service:Test case added successfully: {'id': 54389, 'title': 'Transfer in AMD currency', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372994, 'updated_by': 1103, 'updated_on': 1754372994, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 10, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter 16-digit card number in AMD', 'expected': 'Card number input field accepts exactly 16 digits', 'additional_info': '', 'refs': ''}, {'content': 'Verify transaction details', 'expected': 'Transaction details are confirmed before execution', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54390, 'title': 'Card number input field accepts exactly 16 digits', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372995, 'updated_by': 1103, 'updated_on': 1754372995, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 11, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter card number with less than 16 digits', 'expected': 'Error message appears (less than or more than 16 digits)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54391, 'title': 'Card number input field accepts exactly 16 digits - invalid card', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372995, 'updated_by': 1103, 'updated_on': 1754372995, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 12, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter card number with more than 16 digits', 'expected': 'Error message appears (less than or more than 16 digits)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54392, 'title': 'Transfer amount is within limits', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372995, 'updated_by': 1103, 'updated_on': 1754372995, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 13, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid transfer amount (1000-2000000 AMD)', 'expected': 'Transaction details are confirmed before execution', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54393, 'title': 'Transfer amount is out of limits', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372996, 'updated_by': 1103, 'updated_on': 1754372996, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 14, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter invalid transfer amount (less than 1000 or more than 2000000 AMD)', 'expected': 'Error message appears (amount out of limits)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54394, 'title': 'Transfer from inactive card is rejected', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372996, 'updated_by': 1103, 'updated_on': 1754372996, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 15, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter active card number', 'expected': 'Error message appears (transfer from inactive card rejected)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54395, 'title': 'Successful transfer', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372996, 'updated_by': 1103, 'updated_on': 1754372996, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 16, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid transfer details (card number, amount, etc.)', 'expected': 'Success message appears after successful transfer', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:main:Generated test cases: {'id': 54395, 'title': 'Successful transfer', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754372996, 'updated_by': 1103, 'updated_on': 1754372996, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 16, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Open mobile banking app', 'expected': 'Mobile banking app is opened', 'additional_info': '', 'refs': ''}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is selected', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid transfer details (card number, amount, etc.)', 'expected': 'Success message appears after successful transfer', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Output: Here is the output in JSON format:
+
+{
+  "title": "To Card Transfers",
+  "custom_steps": "Input card number, Select AMD currency, Enter amount between 1000 and 2000000, Confirm transaction details, Click transfer button",
+  "custom_steps_separated": [
+    {
+      "content": "Enter a valid 16-digit card number", 
+      "expected": "The system accepts the input", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter an invalid card number (less than 16 digits)", 
+      "expected": "An error message appears", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Enter an invalid card number (more than 16 digits)", 
+      "expected": "An error message appears", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select AMD currency and enter amount less than 1000 AMD", 
+      "expected": "The system rejects the transfer", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select AMD currency and enter amount greater than 2000000 AMD", 
+      "expected": "The system rejects the transfer", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Select inactive card for transfer", 
+      "expected": "The system rejects the transfer", 
+      "additional_info": "", 
+      "refs": ""
+    },
+    {
+      "content": "Confirm transaction details and click transfer button", 
+      "expected": "A success message appears after a successful transfer", 
+      "additional_info": "", 
+      "refs": ""
+    }
+  ],
+  "automation_type": 0
+}
+INFO:ollama_service:Extracted cases: [{'title': 'To Card Transfers', 'custom_steps': 'Input card number, Select AMD currency, Enter amount between 1000 and 2000000, Confirm transaction details, Click transfer button', 'custom_steps_separated': [{'content': 'Enter a valid 16-digit card number', 'expected': 'The system accepts the input', 'additional_info': '', 'refs': ''}, {'content': 'Enter an invalid card number (less than 16 digits)', 'expected': 'An error message appears', 'additional_info': '', 'refs': ''}, {'content': 'Enter an invalid card number (more than 16 digits)', 'expected': 'An error message appears', 'additional_info': '', 'refs': ''}, {'content': 'Select AMD currency and enter amount less than 1000 AMD', 'expected': 'The system rejects the transfer', 'additional_info': '', 'refs': ''}, {'content': 'Select AMD currency and enter amount greater than 2000000 AMD', 'expected': 'The system rejects the transfer', 'additional_info': '', 'refs': ''}, {'content': 'Select inactive card for transfer', 'expected': 'The system rejects the transfer', 'additional_info': '', 'refs': ''}, {'content': 'Confirm transaction details and click transfer button', 'expected': 'A success message appears after a successful transfer', 'additional_info': '', 'refs': ''}], 'automation_type': 0}]
+INFO:ollama_service:Output: Here is the output in JSON format:
+
+{
+"title": "To Card Transfer - Only AMD Currency",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, select currency as AMD, click Next",
+"custom_steps_separated": [
+{
+"content": "Select currency as anything except AMD", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+},
+{
+"content": "Enter a 15-digit card number", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Correct 16-Digit Card Number",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number, click Next",
+"custom_steps_separated": [
+{
+"content": "Enter exactly 16-digit card number", 
+"expected": "Transaction details confirmation page appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Incorrect Card Number Length",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter a card number with less than or more than 16 digits, click Next",
+"custom_steps_separated": [
+{
+"content": "Enter a card number with less than 16 digits", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+},
+{
+"content": "Enter a card number with more than 16 digits", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Amount Less Than Minimum",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter an amount less than the minimum allowed (1000 AMD), click Next",
+"custom_steps_separated": [
+{
+"content": "Enter an amount of 999 AMD", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Amount Greater Than Maximum",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter an amount greater than the maximum allowed (2,000,000 AMD), click Next",
+"custom_steps_separated": [
+{
+"content": "Enter an amount of 2,000,001 AMD", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Active Card",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number of an active card, click Next",
+"custom_steps_separated": [
+{
+"content": "Enter exactly 16-digit card number of an active card", 
+"expected": "Transaction details confirmation page appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Inactive Card",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number of an inactive card, click Next",
+"custom_steps_separated": [
+{
+"content": "Enter exactly 16-digit card number of an inactive card", 
+"expected": "Error message appears", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer - Successful Transaction",
+"custom_steps": "Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number and a valid amount, click Confirm and Execute",
+"custom_steps_separated": [
+{
+"content": "Enter exactly 16-digit card number and a valid amount", 
+"expected": "Success message appears after transaction execution", 
+"additional_info": "", 
+"refs": ""
+}
+],
+"automation_type": 0
+}
+INFO:ollama_service:Extracted cases: [{'title': 'To Card Transfer - Only AMD Currency', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, select currency as AMD, click Next', 'custom_steps_separated': [{'content': 'Select currency as anything except AMD', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}, {'content': 'Enter a 15-digit card number', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Correct 16-Digit Card Number', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number, click Next', 'custom_steps_separated': [{'content': 'Enter exactly 16-digit card number', 'expected': 'Transaction details confirmation page appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Incorrect Card Number Length', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter a card number with less than or more than 16 digits, click Next', 'custom_steps_separated': [{'content': 'Enter a card number with less than 16 digits', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}, {'content': 'Enter a card number with more than 16 digits', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Amount Less Than Minimum', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter an amount less than the minimum allowed (1000 AMD), click Next', 'custom_steps_separated': [{'content': 'Enter an amount of 999 AMD', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Amount Greater Than Maximum', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter an amount greater than the maximum allowed (2,000,000 AMD), click Next', 'custom_steps_separated': [{'content': 'Enter an amount of 2,000,001 AMD', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Active Card', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number of an active card, click Next', 'custom_steps_separated': [{'content': 'Enter exactly 16-digit card number of an active card', 'expected': 'Transaction details confirmation page appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Inactive Card', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number of an inactive card, click Next', 'custom_steps_separated': [{'content': 'Enter exactly 16-digit card number of an inactive card', 'expected': 'Error message appears', 'additional_info': '', 'refs': ''}], 'automation_type': 0}, {'title': 'To Card Transfer - Successful Transaction', 'custom_steps': 'Open mobile banking app, navigate to To Card transfer page, enter a correct 16-digit card number and a valid amount, click Confirm and Execute', 'custom_steps_separated': [{'content': 'Enter exactly 16-digit card number and a valid amount', 'expected': 'Success message appears after transaction execution', 'additional_info': '', 'refs': ''}], 'automation_type': 0}]
