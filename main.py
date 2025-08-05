@@ -20,10 +20,11 @@ from confluence_service import get_confluence_footer_comments
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
 from ollama_service import  ollama_generate_prompt, ollama_healthcheck, generate_test_cases_ollama 
+
 from testrail_service import post_test_case_to_testrail
-from testrail_service import TestCasePayload
 from testrail_service import get_testrail_case
 from testrail_service import StepSeparated
+from testrail_service import TestCasePayload
 
 import logging
 logging.basicConfig(level=logging.INFO, filename="log.log")
@@ -79,13 +80,36 @@ async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
     user_story = fetch_issue_from_jira(input_data.issue_key)
     #test_cases = generate_test_cases(user_story, mock=mock)
     test_cases = generate_test_cases_ollama(user_story)
+
+    for case in test_cases:
+        #Convert the test case to a TestCasePayload object with custom_steps_separated as StepSeparated objects
+        if isinstance(case, dict):
+            custom_steps_separated = [
+                StepSeparated(content=step["content"], expected=step.get("expected", ""))
+                for step in case.get("custom_steps_separated", [])
+            ]
+            case_payload = TestCasePayload(
+                project_id=1047,
+                suite_id=1409,
+                section_id=12172,
+                title=case.get("title"),
+                custom_steps=case.get("custom_steps", ""),
+                custom_steps_separated=custom_steps_separated,
+                automation_type=case.get("automation_type", 0)
+            )
+            # Post the test case to TestRail
+            try:
+                testrail_response = post_test_case_to_testrail(case_payload)
+            except Exception as e:
+                logger.error(f"Failed to add test case to TestRail: {str(e)}")
+                raise HTTPException(status_code=500, detail=f"Failed to add test case to TestRail: {str(e)}")
+    logger.info(f"Generated test cases: {testrail_response}")
     
-    
-    logger.info(f"The test_cases: {test_cases}")
-    result = add_comment_to_jira(input_data.issue_key, test_cases)
+    #logger.info(f"The test_cases: {test_cases}")
+    result = add_comment_to_jira(input_data.issue_key, "testrail cases generated and added to TestRail. Please check the TestRail for details.")
     
     #add test trail 
-    return {"issue_key": input_data.issue_key, "action":result, "generated_test_cases": test_cases}
+    return {"issue_key": input_data.issue_key, "action":result, "generated_test_cases": test_cases, "testrail_response": testrail_response}
 
 @app.post("/add-comment/")
 async def add_comment(input_data: JiraCommentInput):
