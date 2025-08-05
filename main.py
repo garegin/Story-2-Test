@@ -19,7 +19,7 @@ from confluence_service import get_confluence_footer_comments
 
 from models.jira_models import IssueKeyInput, JiraCommentInput
 from models.confluence_models import ConfluenceEventInput, ConfluencePageCommentInput
-from ollama_service import  ollama_generate_prompt, ollama_healthcheck, generate_test_cases_ollama 
+from ollama_service import  ollama_generate_prompt, ollama_healthcheck, generate_test_cases_ollama, generate_test_cases_ollama_prompt_test
 
 from testrail_service import post_test_case_to_testrail
 from testrail_service import get_testrail_case
@@ -233,7 +233,19 @@ def chat(req: PromptRequest):
 
     response = ollama_generate_prompt(req.prompt, req.model)
     
-    return response.json()
+    return response
+
+class PromptTestRequest(BaseModel):
+    prompt: str
+    issue_key: str = "ITG-224"  # Default model
+@app.post("/prompt")
+def prompt(req:PromptTestRequest):
+
+    user_story = fetch_issue_from_jira(req.issue_key)
+
+    response = generate_test_cases_ollama_prompt_test(user_story, req.prompt)
+    
+    return response
 
 class TestRailCaseInput(BaseModel):
     project_id: int
