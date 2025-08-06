@@ -58,10 +58,10 @@ The output must be in the following format below. Do not include any additional 
 {{
   "title": "generated test case title",
   "custom_steps": "comma separated steps or just one step for short explanation",
-  "custom_ispositive": 0 for Positive, 1 for Negative. the model must decide based on the exact test case and write 0 or 1
+  "custom_ispositive": "0 for Positive, 1 for Negative. decide on value based on the exact test case and write 0 or 1",
   "custom_automation_type": 0, ##Not Automated
-  "type_id": "test case type, example: 0 for Acceptance, 1 for Accessibility, 2 for Automated, 3 for Case with question, 4 for Compatibility, 5 for Destructive, 6 for Functional, 7 for Other, 8 for Performance, 9 for Regression, 10 for Security, 11 for Smoke & Sanity, 12 for Usability. please use the most appropriate type for the test case.",
-  "custom_preconds": "list here all preconditions that model generates, and add Base URL link, Endpoint, Method, Authorization in case of API/Backend testing",
+  "type_id": "test case type, example: 0 for Acceptance, 1 for Accessibility, 4 for Compatibility, 7 for Load, 8 for Localization, 9 for Other, 10 for Performance, 12 for Sanity, 13 for Security, 14 for Smoke, 15 for Stress, 16 for Usability. Please use the most appropriate type for the test case.", 
+  "custom_preconds": "list here all preconditions that model generates if you think it is needed for the test case",
   "priority_id": 2,## Medium,
   "custom_steps_separated": [
     {{
@@ -107,9 +107,7 @@ def extract_test_cases(text):
                     case["custom_steps_separated"] = [
                         {
                             "content": step.get("content", ""),
-                            "expected": step.get("expected", ""),
-                            "additional_info": step.get("additional_info", ""),
-                            "refs": step.get("refs", "")
+                            "expected": step.get("expected", "")
                         }
                         for step in case["custom_steps_separated"]
                     ]
@@ -143,9 +141,9 @@ The output must be in the following format below. Do not include any additional 
 {{
   "title": "generated test case title",
   "custom_steps": "comma separated steps or just one step for short explanation",
-  "custom_ispositive": 0 for Positive, 1 for Negative. the model must decide based on the exact test case and write 0 or 1
+  "custom_ispositive": "0 for Positive, 1 for Negative. the model must decide based on the exact test case and write 0 or 1"
   "custom_automation_type": 0, ##Not Automated
-  "type_id": "test case type, example: 0 for Acceptance, 1 for Accessibility, 2 for Automated, 3 for Case with question, 4 for Compatibility, 5 for Destructive, 6 for Functional, 7 for Other, 8 for Performance, 9 for Regression, 10 for Security, 11 for Smoke & Sanity, 12 for Usability. please use the most appropriate type for the test case.",
+  "type_id": "test case type, example: 0 for Acceptance, 1 for Accessibility, 4 for Compatibility, 7 for Load, 8 for Localization, 9 for Other, 10 for Performance, 12 for Sanity, 13 for Security, 14 for Smoke, 15 for Stress, 16 for Usability. Please use the most appropriate type for the test case.", 
   "custom_preconds": "list here all preconditions that model generates, and add Base URL link, Endpoint, Method, Authorization in case of API/Backend testing",
   "priority_id": 2,## Medium,
   "custom_steps_separated": [

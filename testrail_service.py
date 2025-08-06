@@ -29,6 +29,9 @@ class TestCasePayload(BaseModel):
     section_id: int = None  # Optional, if not provided will use suite_id
     title: str
     custom_steps: str
+    custom_preconds: Optional[str] = None
+    priority_id: int = 2  # Default to Medium
+    type_id: Optional[int] = None  # Optional, if not provided will not be set 7
     custom_steps_separated: Optional[List[StepSeparated]] = None  # <-- Change here
     automation_type: int = 0
     custom_ispositive: int = 0  # Default to negative if not specified
@@ -52,6 +55,9 @@ def post_test_case_to_testrail(payload: TestCasePayload):
             title=payload.title,
             custom_steps=payload.custom_steps,
             custom_steps_separated=steps_separated,
+            custom_preconds=payload.custom_preconds,
+            priority_id=payload.priority_id,
+            type_id=payload.type_id,
             custom_automation_type=payload.automation_type,
             custom_ispositive=payload.custom_ispositive
         )
