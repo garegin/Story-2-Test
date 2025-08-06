@@ -7925,3 +7925,1514 @@ INFO:testrail_service:Test case added successfully: {'id': 54528, 'title': 'Tran
 INFO:testrail_service:Test case added successfully: {'id': 54529, 'title': 'Transfer from inactive card', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754402684, 'updated_by': 1103, 'updated_on': 1754402684, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 14, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Select To Card transfer', 'expected': 'Transfer type should be To Card', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid card number for inactive account', 'expected': 'Card number is valid (16 digits)', 'additional_info': '', 'refs': ''}, {'content': 'Check error message appears', 'expected': 'Error message appears (card is inactive)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
 INFO:testrail_service:Test case added successfully: {'id': 54530, 'title': 'Successful To Card transfer with confirmation', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754402684, 'updated_by': 1103, 'updated_on': 1754402684, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 15, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Select To Card transfer', 'expected': 'Transfer type should be To Card', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid card number', 'expected': 'Card number is valid (16 digits)', 'additional_info': '', 'refs': ''}, {'content': 'Confirm transaction details', 'expected': 'Transaction details are confirmed', 'additional_info': '', 'refs': ''}, {'content': 'Check success message appears', 'expected': 'Success message appears (transfer successful)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
 INFO:main:Generated test cases: {'id': 54530, 'title': 'Successful To Card transfer with confirmation', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754402684, 'updated_by': 1103, 'updated_on': 1754402684, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 15, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Select To Card transfer', 'expected': 'Transfer type should be To Card', 'additional_info': '', 'refs': ''}, {'content': 'Enter valid card number', 'expected': 'Card number is valid (16 digits)', 'additional_info': '', 'refs': ''}, {'content': 'Confirm transaction details', 'expected': 'Transaction details are confirmed', 'additional_info': '', 'refs': ''}, {'content': 'Check success message appears', 'expected': 'Success message appears (transfer successful)', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Output: Here are the test cases in JSON format:
+
+**Test Case 1**
+{
+"title": "The system allows To Card transfers only in AMD currency",
+"custom_steps": "Go to To Card transfer page, select currency as AMD", 
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Go to To Card transfer page",
+        "expected": ""
+    },
+    {
+        "content": "Select currency as AMD",
+        "expected": "AMD"
+    }
+]
+}
+
+**Test Case 2**
+{
+"title": "The card number input field accepts exactly 16 digits",
+"custom_steps": "Enter a valid 16-digit card number", 
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Enter a valid 16-digit card number",
+        "expected": ""
+    }
+]
+}
+
+**Test Case 3**
+{
+"title": "An error message appears if the card number is less than or more than 16 digits",
+"custom_steps": "Enter an invalid card number with fewer/different digits", 
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Enter an invalid card number with fewer/different digits",
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 4**
+{
+"title": "The minimum allowed amount is 1000 AMD",
+"custom_steps": "Try to transfer less than 1000 AMD", 
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Try to transfer less than 1000 AMD",
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 5**
+{
+"title": "The maximum allowed amount is 2,000,000 AMD",
+"custom_steps": "Try to transfer more than 2,000,000 AMD", 
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Try to transfer more than 2,000,000 AMD",
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 6**
+{
+"title": "The system rejects transfers from inactive cards",
+"custom_steps": "Enter an inactive card number", 
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Enter an inactive card number",
+        "expected": "Transfer rejected"
+    }
+]
+}
+
+**Test Case 7**
+{
+"title": "The system confirms transaction details before execution",
+"custom_steps": "Start a transfer, confirm the details", 
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Start a transfer",
+        "expected": ""
+    },
+    {
+        "content": "Confirm the details",
+        "expected": "Transaction confirmed"
+    }
+]
+}
+
+**Test Case 8**
+{
+"title": "A success message is displayed after a successful transfer",
+"custom_steps": "Complete a successful transfer", 
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 13,
+"priority_id": 2,
+"custom_preconds": [],
+"custom_steps_separated": [
+    {
+        "content": "Complete a successful transfer",
+        "expected": "Success message appears"
+    }
+]
+}
+INFO:ollama_service:Extracted cases: []
+INFO:ollama_service:Output: Here are the test cases in JSON format:
+
+**Test Case 1: To Card Transfer - Valid Card Number**
+{
+"title": "The system successfully allows To Card transfer with valid card number",
+"custom_steps": "Enter valid card number, enter amount greater than or equal to 1000 AMD, click 'Transfer' button",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 1,## High,
+"custom_steps_separated": [
+    {
+        "content": "Enter valid card number", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Enter amount greater than or equal to 1000 AMD", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button", 
+        "expected": "Success message appears"
+    }
+]
+}
+
+**Test Case 2: To Card Transfer - Invalid Card Number**
+{
+"title": "The system does not allow To Card transfer with invalid card number",
+"custom_steps": "Enter invalid card number, enter amount greater than or equal to 1000 AMD, click 'Transfer' button",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 2,## Medium,
+"custom_steps_separated": [
+    {
+        "content": "Enter invalid card number", 
+        "expected": "Error message appears"
+    },
+    {
+        "content": "Enter amount greater than or equal to 1000 AMD", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button", 
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 3: To Card Transfer - Amount Less Than Minimum**
+{
+"title": "The system does not allow To Card transfer with amount less than minimum",
+"custom_steps": "Enter valid card number, enter amount less than 1000 AMD, click 'Transfer' button",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 2,## Medium,
+"custom_steps_separated": [
+    {
+        "content": "Enter valid card number", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Enter amount less than 1000 AMD", 
+        "expected": "Error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button", 
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 4: To Card Transfer - Amount Greater Than Maximum**
+{
+"title": "The system does not allow To Card transfer with amount greater than maximum",
+"custom_steps": "Enter valid card number, enter amount greater than 2,000,000 AMD, click 'Transfer' button",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 2,## Medium,
+"custom_steps_separated": [
+    {
+        "content": "Enter valid card number", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Enter amount greater than 2,000,000 AMD", 
+        "expected": "Error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button", 
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 5: To Card Transfer - Inactive Card**
+{
+"title": "The system does not allow To Card transfer from inactive card",
+"custom_steps": "Enter invalid card number, enter amount greater than or equal to 1000 AMD, click 'Transfer' button",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 2,## Medium,
+"custom_steps_separated": [
+    {
+        "content": "Enter invalid card number", 
+        "expected": "Error message appears"
+    },
+    {
+        "content": "Enter amount greater than or equal to 1000 AMD", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button", 
+        "expected": "Error message appears"
+    }
+]
+}
+
+**Test Case 6: To Card Transfer - Confirm Transaction Details**
+{
+"title": "The system confirms transaction details before execution",
+"custom_steps": "Enter valid card number, enter amount greater than or equal to 1000 AMD, click 'Transfer' button and confirm transaction details",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 1,## High,
+"custom_steps_separated": [
+    {
+        "content": "Enter valid card number", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Enter amount greater than or equal to 1000 AMD", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button and confirm transaction details", 
+        "expected": "Success message appears"
+    }
+]
+}
+
+**Test Case 7: To Card Transfer - Success Message**
+{
+"title": "The system displays success message after successful transfer",
+"custom_steps": "Enter valid card number, enter amount greater than or equal to 1000 AMD, click 'Transfer' button and confirm transaction details",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,## Sanity
+"custom_preconds": ["The user is logged in"],
+"priority_id": 1,## High,
+"custom_steps_separated": [
+    {
+        "content": "Enter valid card number", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Enter amount greater than or equal to 1000 AMD", 
+        "expected": "No error message appears"
+    },
+    {
+        "content": "Click 'Transfer' button and confirm transaction details", 
+        "expected": "Success message appears"
+    }
+]
+}
+INFO:ollama_service:Extracted cases: []
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Output: Here are the test cases in JSON format for the user story and acceptance criteria:
+
+{
+  "title": "TC1: To Card Transfer in AMD Currency",
+  "custom_steps": "User attempts to make a To Card transfer using recipient's card number with currency other than AMD.",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User selects recipient's card number with currency other than AMD.",
+      "expected": "Error message appears."
+    }
+  ]
+}
+
+{
+  "title": "TC2: Valid Card Number Input",
+  "custom_steps": "User enters a valid 16-digit card number and attempts to make a To Card transfer.",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters a valid 16-digit card number.",
+      "expected": "Transaction details are confirmed."
+    }
+  ]
+}
+
+{
+  "title": "TC3: Invalid Card Number Length",
+  "custom_steps": "User attempts to make a To Card transfer with an invalid card number length (less than or more than 16 digits).",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters an invalid card number with less than or more than 16 digits.",
+      "expected": "Error message appears."
+    }
+  ]
+}
+
+{
+  "title": "TC4: Insufficient Amount",
+  "custom_steps": "User attempts to make a To Card transfer with an amount less than the minimum allowed (1000 AMD).",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters an amount less than the minimum allowed (1000 AMD).",
+      "expected": "Error message appears."
+    }
+  ]
+}
+
+{
+  "title": "TC5: Excessive Amount",
+  "custom_steps": "User attempts to make a To Card transfer with an amount greater than the maximum allowed (2,000,000 AMD).",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters an amount greater than the maximum allowed (2,000,000 AMD).",
+      "expected": "Error message appears."
+    }
+  ]
+}
+
+{
+  "title": "TC6: Inactive Card",
+  "custom_steps": "User attempts to make a To Card transfer with an inactive card.",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User attempts to make a To Card transfer with an inactive card.",
+      "expected": "Error message appears."
+    }
+  ]
+}
+
+{
+  "title": "TC7: Successful Transfer",
+  "custom_steps": "User makes a successful To Card transfer with valid details and amount within the allowed range.",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters valid details and amount within the allowed range.",
+      "expected": "Success message is displayed."
+    }
+  ]
+}
+
+{
+  "title": "TC8: Transaction Confirmation",
+  "custom_steps": "User attempts to make a To Card transfer without confirming transaction details.",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User attempts to make a To Card transfer without confirming transaction details.",
+      "expected": "Error message appears."
+    }
+  ]
+}
+
+{
+  "title": "TC9: Invalid Amount",
+  "custom_steps": "User attempts to make a To Card transfer with an invalid amount (less than or greater than the allowed range).",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12, 
+  "custom_preconds": [
+    {
+      "Base URL": "/mobile-banking",
+      "Endpoint": "/to-card-transfer"
+    }
+  ],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters an invalid amount (less than or greater than the allowed range).",
+      "expected": "Error message appears."
+    }
+  ]
+}
+INFO:ollama_service:Extracted cases: [{'title': 'TC1: To Card Transfer in AMD Currency', 'custom_steps': "User attempts to make a To Card transfer using recipient's card number with currency other than AMD.", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': "User selects recipient's card number with currency other than AMD.", 'expected': 'Error message appears.'}]}, {'title': 'TC2: Valid Card Number Input', 'custom_steps': 'User enters a valid 16-digit card number and attempts to make a To Card transfer.', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters a valid 16-digit card number.', 'expected': 'Transaction details are confirmed.'}]}, {'title': 'TC3: Invalid Card Number Length', 'custom_steps': 'User attempts to make a To Card transfer with an invalid card number length (less than or more than 16 digits).', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters an invalid card number with less than or more than 16 digits.', 'expected': 'Error message appears.'}]}, {'title': 'TC4: Insufficient Amount', 'custom_steps': 'User attempts to make a To Card transfer with an amount less than the minimum allowed (1000 AMD).', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters an amount less than the minimum allowed (1000 AMD).', 'expected': 'Error message appears.'}]}, {'title': 'TC5: Excessive Amount', 'custom_steps': 'User attempts to make a To Card transfer with an amount greater than the maximum allowed (2,000,000 AMD).', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters an amount greater than the maximum allowed (2,000,000 AMD).', 'expected': 'Error message appears.'}]}, {'title': 'TC6: Inactive Card', 'custom_steps': 'User attempts to make a To Card transfer with an inactive card.', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User attempts to make a To Card transfer with an inactive card.', 'expected': 'Error message appears.'}]}, {'title': 'TC7: Successful Transfer', 'custom_steps': 'User makes a successful To Card transfer with valid details and amount within the allowed range.', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters valid details and amount within the allowed range.', 'expected': 'Success message is displayed.'}]}, {'title': 'TC8: Transaction Confirmation', 'custom_steps': 'User attempts to make a To Card transfer without confirming transaction details.', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User attempts to make a To Card transfer without confirming transaction details.', 'expected': 'Error message appears.'}]}, {'title': 'TC9: Invalid Amount', 'custom_steps': 'User attempts to make a To Card transfer with an invalid amount (less than or greater than the allowed range).', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': [{'Base URL': '/mobile-banking', 'Endpoint': '/to-card-transfer'}], 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters an invalid amount (less than or greater than the allowed range).', 'expected': 'Error message appears.'}]}]
+INFO:ollama_service:Output: Here are the test cases in JSON format:
+
+**Test Case 1: To Card Transfer - Currency Validation**
+{
+  "title": "The system only allows To Card transfers in AMD currency",
+  "custom_steps": "Enter card number with USD currency, Expected error message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Enter card number with USD currency", 
+      "expected": "Error message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 2: To Card Transfer - Card Number Validation (16 digits)**
+{
+  "title": "The system requires exactly 16-digit card number for To Card transfers",
+  "custom_steps": "Enter card number with less than 16 digits, Expected error message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Enter card number with less than 16 digits", 
+      "expected": "Error message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 3: To Card Transfer - Card Number Validation (less than 16 digits)**
+{
+  "title": "The system requires exactly 16-digit card number for To Card transfers",
+  "custom_steps": "Enter card number with more than 16 digits, Expected error message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Enter card number with more than 16 digits", 
+      "expected": "Error message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 4: To Card Transfer - Minimum Amount Validation**
+{
+  "title": "The system requires a minimum amount of 1000 AMD for To Card transfers",
+  "custom_steps": "Enter transfer amount less than 1000 AMD, Expected error message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Enter transfer amount less than 1000 AMD", 
+      "expected": "Error message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 5: To Card Transfer - Maximum Amount Validation**
+{
+  "title": "The system requires a maximum amount of 2,000,000 AMD for To Card transfers",
+  "custom_steps": "Enter transfer amount more than 2,000,000 AMD, Expected error message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Enter transfer amount more than 2,000,000 AMD", 
+      "expected": "Error message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 6: To Card Transfer - Inactive Card Validation**
+{
+  "title": "The system rejects transfers from inactive cards",
+  "custom_steps": "Enter inactive card number, Expected error message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Enter inactive card number", 
+      "expected": "Error message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 7: To Card Transfer - Transaction Confirmation**
+{
+  "title": "The system confirms transaction details before execution",
+  "custom_steps": "Initiate transfer, Expected confirmation message appears",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Initiate transfer", 
+      "expected": "Confirmation message appears"
+    }
+  ],
+  "automation_type": 0
+}
+
+**Test Case 8: To Card Transfer - Success Message**
+{
+  "title": "The system displays a success message after successful transfer",
+  "custom_steps": "Initiate successful transfer, Expected success message appears",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "custom_preconds": [],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Initiate successful transfer", 
+      "expected": "Success message appears"
+    }
+  ],
+  "automation_type": 0
+}
+INFO:ollama_service:Extracted cases: []
+INFO:ollama_service:Output: Here are the test cases in JSON format for the user story and acceptance criteria:
+
+{
+  "title": "To Card Transfers - Only AMD Currency",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User selects USD as transfer currency.",
+      "expected": "Error message appears"
+    }
+  ]
+}
+
+{
+  "title": "To Card Transfers - Correct Card Number Length",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User enters a card number with exactly 16 digits.",
+      "expected": "Transfer form is valid"
+    },
+    {
+      "content": "User enters a card number with less than 16 digits.",
+      "expected": "Error message appears"
+    },
+    {
+      "content": "User enters a card number with more than 16 digits.",
+      "expected": "Error message appears"
+    }
+  ]
+}
+
+{
+  "title": "To Card Transfers - Minimum Allowed Amount",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User attempts to transfer an amount less than 1000 AMD.",
+      "expected": "Error message appears"
+    }
+  ]
+}
+
+{
+  "title": "To Card Transfers - Maximum Allowed Amount",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User attempts to transfer an amount greater than 2,000,000 AMD.",
+      "expected": "Error message appears"
+    }
+  ]
+}
+
+{
+  "title": "To Card Transfers - Inactive Card",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User attempts to transfer from an inactive card.",
+      "expected": "Transfer is rejected"
+    }
+  ]
+}
+
+{
+  "title": "To Card Transfers - Transaction Confirmation",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User initiates a transfer and confirms transaction details.",
+      "expected": "Transaction is executed"
+    }
+  ]
+}
+
+{
+  "title": "To Card Transfers - Successful Transfer",
+  "custom_steps": "",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 12,
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "User initiates a transfer and confirms transaction details.",
+      "expected": "Success message appears"
+    }
+  ]
+}
+INFO:ollama_service:Extracted cases: [{'title': 'To Card Transfers - Only AMD Currency', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User selects USD as transfer currency.', 'expected': 'Error message appears'}]}, {'title': 'To Card Transfers - Correct Card Number Length', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User enters a card number with exactly 16 digits.', 'expected': 'Transfer form is valid'}, {'content': 'User enters a card number with less than 16 digits.', 'expected': 'Error message appears'}, {'content': 'User enters a card number with more than 16 digits.', 'expected': 'Error message appears'}]}, {'title': 'To Card Transfers - Minimum Allowed Amount', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User attempts to transfer an amount less than 1000 AMD.', 'expected': 'Error message appears'}]}, {'title': 'To Card Transfers - Maximum Allowed Amount', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User attempts to transfer an amount greater than 2,000,000 AMD.', 'expected': 'Error message appears'}]}, {'title': 'To Card Transfers - Inactive Card', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User attempts to transfer from an inactive card.', 'expected': 'Transfer is rejected'}]}, {'title': 'To Card Transfers - Transaction Confirmation', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User initiates a transfer and confirms transaction details.', 'expected': 'Transaction is executed'}]}, {'title': 'To Card Transfers - Successful Transfer', 'custom_steps': '', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User initiates a transfer and confirms transaction details.', 'expected': 'Success message appears'}]}]
+INFO:ollama_service:Output: Here are the test cases in JSON format:
+
+```
+{
+  "title": "The system must allow To Card transfers only in AMD currency",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and amount greater than 0 in AMD, click 'Next' button",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter recipient's card number and amount greater than 0 in AMD",
+      "expected": "Card number and amount fields are populated with correct data"
+    },
+    {
+      "content": "Click 'Next' button",
+      "expected": "Transaction details confirmation page is displayed"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "The card number input field must accept exactly 16 digits",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter invalid card number (less than or more than 16 digits), click 'Next' button",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter invalid card number (less than or more than 16 digits)",
+      "expected": "Error message is displayed indicating incorrect card number format"
+    },
+    {
+      "content": "Click 'Next' button",
+      "expected": "Transaction details confirmation page is not displayed"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "An error message must appear if the card number is less than or more than 16 digits",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter valid card number (16 digits), click 'Next' button",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter valid card number (16 digits)",
+      "expected": "Card number field is populated with correct data"
+    },
+    {
+      "content": "Click 'Next' button",
+      "expected": "Transaction details confirmation page is displayed"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "The minimum allowed amount is 1000 AMD",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and amount less than 1000 AMD, click 'Next' button",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter recipient's card number and amount less than 1000 AMD",
+      "expected": "Error message is displayed indicating minimum allowed amount not met"
+    },
+    {
+      "content": "Click 'Next' button",
+      "expected": "Transaction details confirmation page is not displayed"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "The maximum allowed amount is 2,000,000 AMD",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and amount greater than 2,000,000 AMD, click 'Next' button",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter recipient's card number and amount greater than 2,000,000 AMD",
+      "expected": "Error message is displayed indicating maximum allowed amount not met"
+    },
+    {
+      "content": "Click 'Next' button",
+      "expected": "Transaction details confirmation page is not displayed"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "The system must reject transfers from inactive cards",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter recipient's inactive card number and valid amount, click 'Next' button",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter recipient's inactive card number and valid amount",
+      "expected": "Error message is displayed indicating that the card is inactive"
+    },
+    {
+      "content": "Click 'Next' button",
+      "expected": "Transaction details confirmation page is not displayed"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "The system must confirm transaction details before execution",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and valid amount, click 'Next' button, confirm transaction details, click 'Execute' button",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter recipient's card number and valid amount",
+      "expected": "Transaction details confirmation page is displayed"
+    },
+    {
+      "content": "Confirm transaction details",
+      "expected": "Transaction execution confirmation page is displayed"
+    },
+    {
+      "content": "Click 'Execute' button",
+      "expected": "Success message is displayed indicating successful transfer"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "A success message must be displayed after a successful transfer",
+  "custom_steps": "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and valid amount, click 'Next' button, confirm transaction details, click 'Execute' button",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": ["Base URL link: https://mobile-banking-app.com"],
+  "priority_id": 2,
+  "custom_steps_separated": [
+    {
+      "content": "Log in to mobile banking app",
+      "expected": "User is logged in successfully"
+    },
+    {
+      "content": "Select To Card transfer option",
+      "expected": "To Card transfer option is displayed"
+    },
+    {
+      "content": "Enter recipient's card number and valid amount",
+      "expected": "Transaction details confirmation page is displayed"
+    },
+    {
+      "content": "Confirm transaction details",
+      "expected": "Transaction execution confirmation page is displayed"
+    },
+    {
+      "content": "Click 'Execute' button",
+      "expected": "Success message is displayed indicating successful transfer"
+    }
+  ],
+  "automation_type": 0
+}
+```
+INFO:ollama_service:Extracted cases: [{'title': 'The system must allow To Card transfers only in AMD currency', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and amount greater than 0 in AMD, click 'Next' button", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': "Enter recipient's card number and amount greater than 0 in AMD", 'expected': 'Card number and amount fields are populated with correct data'}, {'content': "Click 'Next' button", 'expected': 'Transaction details confirmation page is displayed'}], 'automation_type': 0}, {'title': 'The card number input field must accept exactly 16 digits', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter invalid card number (less than or more than 16 digits), click 'Next' button", 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': 'Enter invalid card number (less than or more than 16 digits)', 'expected': 'Error message is displayed indicating incorrect card number format'}, {'content': "Click 'Next' button", 'expected': 'Transaction details confirmation page is not displayed'}], 'automation_type': 0}, {'title': 'An error message must appear if the card number is less than or more than 16 digits', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter valid card number (16 digits), click 'Next' button", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': 'Enter valid card number (16 digits)', 'expected': 'Card number field is populated with correct data'}, {'content': "Click 'Next' button", 'expected': 'Transaction details confirmation page is displayed'}], 'automation_type': 0}, {'title': 'The minimum allowed amount is 1000 AMD', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and amount less than 1000 AMD, click 'Next' button", 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': "Enter recipient's card number and amount less than 1000 AMD", 'expected': 'Error message is displayed indicating minimum allowed amount not met'}, {'content': "Click 'Next' button", 'expected': 'Transaction details confirmation page is not displayed'}], 'automation_type': 0}, {'title': 'The maximum allowed amount is 2,000,000 AMD', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and amount greater than 2,000,000 AMD, click 'Next' button", 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': "Enter recipient's card number and amount greater than 2,000,000 AMD", 'expected': 'Error message is displayed indicating maximum allowed amount not met'}, {'content': "Click 'Next' button", 'expected': 'Transaction details confirmation page is not displayed'}], 'automation_type': 0}, {'title': 'The system must reject transfers from inactive cards', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter recipient's inactive card number and valid amount, click 'Next' button", 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': "Enter recipient's inactive card number and valid amount", 'expected': 'Error message is displayed indicating that the card is inactive'}, {'content': "Click 'Next' button", 'expected': 'Transaction details confirmation page is not displayed'}], 'automation_type': 0}, {'title': 'The system must confirm transaction details before execution', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and valid amount, click 'Next' button, confirm transaction details, click 'Execute' button", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': "Enter recipient's card number and valid amount", 'expected': 'Transaction details confirmation page is displayed'}, {'content': 'Confirm transaction details', 'expected': 'Transaction execution confirmation page is displayed'}, {'content': "Click 'Execute' button", 'expected': 'Success message is displayed indicating successful transfer'}], 'automation_type': 0}, {'title': 'A success message must be displayed after a successful transfer', 'custom_steps': "Log in to mobile banking app, select To Card transfer option, enter recipient's card number and valid amount, click 'Next' button, confirm transaction details, click 'Execute' button", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 10, 'custom_preconds': ['Base URL link: https://mobile-banking-app.com'], 'priority_id': 2, 'custom_steps_separated': [{'content': 'Log in to mobile banking app', 'expected': 'User is logged in successfully'}, {'content': 'Select To Card transfer option', 'expected': 'To Card transfer option is displayed'}, {'content': "Enter recipient's card number and valid amount", 'expected': 'Transaction details confirmation page is displayed'}, {'content': 'Confirm transaction details', 'expected': 'Transaction execution confirmation page is displayed'}, {'content': "Click 'Execute' button", 'expected': 'Success message is displayed indicating successful transfer'}], 'automation_type': 0}]
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:testrail_api:Create Session{url: https://testrail.ameriabank.am/testrail/, user: garegin.gyulasaryan@ameriabank.am, timeout: 30, headers: {'User-Agent': 'Python TestRail API v: 1.13.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}, verify: True, exception: False, exc_iterations: 3, retry: 3}
+INFO:ollama_service:Output: Here is the output in JSON format:
+
+{
+"title": "To Card Transfers - Allow To Card transfers only in AMD currency",
+"custom_steps": "Input recipient's card number, select AMD as transfer currency",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input recipient's card number (16 digits) and select AMD as transfer currency", 
+        "expected": "System allows to card transfers only in AMD currency"
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfers - Accept exactly 16 digits card number",
+"custom_steps": "Input recipient's card number, check for length",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input recipient's card number (less than 16 digits)", 
+        "expected": "System displays an error message"
+    },
+    {
+        "content": "Input recipient's card number (more than 16 digits)", 
+        "expected": "System displays an error message"
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfers - Reject transfers from inactive cards",
+"custom_steps": "Input recipient's card number, set card status to inactive",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input recipient's card number (inactive card) and select AMD as transfer currency", 
+        "expected": "System rejects the transfer"
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfers - Confirm transaction details before execution",
+"custom_steps": "Input recipient's card number, confirm transaction details",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input recipient's card number and confirm transaction details", 
+        "expected": "System displays a confirmation message"
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfers - Minimum allowed amount is 1000 AMD",
+"custom_steps": "Input minimum transfer amount, check for validation",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input minimum transfer amount (less than 1000 AMD)", 
+        "expected": "System displays an error message"
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfers - Maximum allowed amount is 2,000,000 AMD",
+"custom_steps": "Input maximum transfer amount, check for validation",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input maximum transfer amount (less than 2,000,000 AMD)", 
+        "expected": "System displays an error message"
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfers - Display success message after successful transfer",
+"custom_steps": "Input recipient's card number, confirm transaction details",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"custom_preconds": "Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None",
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "Input recipient's card number and confirm transaction details", 
+        "expected": "System displays a success message"
+    }
+],
+"automation_type": 0
+}
+INFO:ollama_service:Extracted cases: [{'title': 'To Card Transfers - Allow To Card transfers only in AMD currency', 'custom_steps': "Input recipient's card number, select AMD as transfer currency", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': "Input recipient's card number (16 digits) and select AMD as transfer currency", 'expected': 'System allows to card transfers only in AMD currency'}], 'automation_type': 0}, {'title': 'To Card Transfers - Accept exactly 16 digits card number', 'custom_steps': "Input recipient's card number, check for length", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': "Input recipient's card number (less than 16 digits)", 'expected': 'System displays an error message'}, {'content': "Input recipient's card number (more than 16 digits)", 'expected': 'System displays an error message'}], 'automation_type': 0}, {'title': 'To Card Transfers - Reject transfers from inactive cards', 'custom_steps': "Input recipient's card number, set card status to inactive", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': "Input recipient's card number (inactive card) and select AMD as transfer currency", 'expected': 'System rejects the transfer'}], 'automation_type': 0}, {'title': 'To Card Transfers - Confirm transaction details before execution', 'custom_steps': "Input recipient's card number, confirm transaction details", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': "Input recipient's card number and confirm transaction details", 'expected': 'System displays a confirmation message'}], 'automation_type': 0}, {'title': 'To Card Transfers - Minimum allowed amount is 1000 AMD', 'custom_steps': 'Input minimum transfer amount, check for validation', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': 'Input minimum transfer amount (less than 1000 AMD)', 'expected': 'System displays an error message'}], 'automation_type': 0}, {'title': 'To Card Transfers - Maximum allowed amount is 2,000,000 AMD', 'custom_steps': 'Input maximum transfer amount, check for validation', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': 'Input maximum transfer amount (less than 2,000,000 AMD)', 'expected': 'System displays an error message'}], 'automation_type': 0}, {'title': 'To Card Transfers - Display success message after successful transfer', 'custom_steps': "Input recipient's card number, confirm transaction details", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'custom_preconds': 'Base URL: https://example.com/api/v1/transactions, Method: POST, Authorization: None', 'priority_id': 2, 'custom_steps_separated': [{'content': "Input recipient's card number and confirm transaction details", 'expected': 'System displays a success message'}], 'automation_type': 0}]
+INFO:testrail_service:Test case added successfully: {'id': 54644, 'title': 'To Card Transfers - Allow To Card transfers only in AMD currency', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483155, 'updated_by': 1103, 'updated_on': 1754483155, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 16, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': "Input recipient's card number (16 digits) and select AMD as transfer currency", 'expected': 'System allows to card transfers only in AMD currency', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54645, 'title': 'To Card Transfers - Accept exactly 16 digits card number', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483155, 'updated_by': 1103, 'updated_on': 1754483155, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 17, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': "Input recipient's card number (less than 16 digits)", 'expected': 'System displays an error message', 'additional_info': '', 'refs': ''}, {'content': "Input recipient's card number (more than 16 digits)", 'expected': 'System displays an error message', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54646, 'title': 'To Card Transfers - Reject transfers from inactive cards', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483155, 'updated_by': 1103, 'updated_on': 1754483155, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 18, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': "Input recipient's card number (inactive card) and select AMD as transfer currency", 'expected': 'System rejects the transfer', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54647, 'title': 'To Card Transfers - Confirm transaction details before execution', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483156, 'updated_by': 1103, 'updated_on': 1754483156, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 19, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': "Input recipient's card number and confirm transaction details", 'expected': 'System displays a confirmation message', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54648, 'title': 'To Card Transfers - Minimum allowed amount is 1000 AMD', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483156, 'updated_by': 1103, 'updated_on': 1754483156, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 20, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Input minimum transfer amount (less than 1000 AMD)', 'expected': 'System displays an error message', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54649, 'title': 'To Card Transfers - Maximum allowed amount is 2,000,000 AMD', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483156, 'updated_by': 1103, 'updated_on': 1754483156, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 21, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'Input maximum transfer amount (less than 2,000,000 AMD)', 'expected': 'System displays an error message', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54650, 'title': 'To Card Transfers - Display success message after successful transfer', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483156, 'updated_by': 1103, 'updated_on': 1754483156, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 22, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': "Input recipient's card number and confirm transaction details", 'expected': 'System displays a success message', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:main:Generated test cases: {'id': 54650, 'title': 'To Card Transfers - Display success message after successful transfer', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483156, 'updated_by': 1103, 'updated_on': 1754483156, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 22, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': "Input recipient's card number and confirm transaction details", 'expected': 'System displays a success message', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:ollama_service:Output: Here is the generated test case in JSON format:
+
+{
+  "title": "To Card Transfer in AMD currency with valid amount",
+  "custom_steps": "User selects To Card transfer, enters recipient's card number (16 digits), chooses AMD as the currency, and enters a valid amount (1000-2,000,000 AMD).",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": "",
+  "priority_id": 1,## High,
+  "custom_steps_separated": [
+    {
+        "content": "User selects To Card transfer",
+        "expected": "To Card transfer option is displayed"
+    },
+    {
+        "content": "Enters recipient's card number (16 digits)",
+        "expected": "Card number input field accepts exactly 16 digits"
+    },
+    {
+        "content": "Chooses AMD as the currency",
+        "expected": "Only AMD currency option is available for To Card transfer"
+    },
+    {
+        "content": "Enters a valid amount (1000-2,000,000 AMD)",
+        "expected": "Transaction details are displayed with the entered amount"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "To Card Transfer in AMD currency with invalid amount",
+  "custom_steps": "User selects To Card transfer, enters recipient's card number (16 digits), chooses AMD as the currency, and enters an invalid amount (<1000 or >2,000,000 AMD).",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": "",
+  "priority_id": 1,## High,
+  "custom_steps_separated": [
+    {
+        "content": "User selects To Card transfer",
+        "expected": "To Card transfer option is displayed"
+    },
+    {
+        "content": "Enters recipient's card number (16 digits)",
+        "expected": "Card number input field accepts exactly 16 digits"
+    },
+    {
+        "content": "Chooses AMD as the currency",
+        "expected": "Only AMD currency option is available for To Card transfer"
+    },
+    {
+        "content": "Enters an invalid amount (<1000 or >2,000,000 AMD)",
+        "expected": "Error message appears indicating the entered amount is not valid"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "To Card Transfer in AMD currency with inactive card",
+  "custom_steps": "User selects To Card transfer, enters recipient's card number (16 digits) of an inactive card, chooses AMD as the currency, and enters a valid amount.",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": "",
+  "priority_id": 1,## High,
+  "custom_steps_separated": [
+    {
+        "content": "User selects To Card transfer",
+        "expected": "To Card transfer option is displayed"
+    },
+    {
+        "content": "Enters recipient's card number (16 digits) of an inactive card",
+        "expected": "Error message appears indicating the card is inactive"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "To Card Transfer in AMD currency with missing amount",
+  "custom_steps": "User selects To Card transfer, enters recipient's card number (16 digits), chooses AMD as the currency, but does not enter an amount.",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": "",
+  "priority_id": 1,## High,
+  "custom_steps_separated": [
+    {
+        "content": "User selects To Card transfer",
+        "expected": "To Card transfer option is displayed"
+    },
+    {
+        "content": "Enters recipient's card number (16 digits)",
+        "expected": "Card number input field accepts exactly 16 digits"
+    },
+    {
+        "content": "Chooses AMD as the currency",
+        "expected": "Only AMD currency option is available for To Card transfer"
+    },
+    {
+        "content": "Does not enter an amount",
+        "expected": "Error message appears indicating the amount is missing"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "To Card Transfer in AMD currency with successful execution",
+  "custom_steps": "User selects To Card transfer, enters recipient's card number (16 digits), chooses AMD as the currency, and enters a valid amount. The transaction is executed successfully.",
+  "custom_ispositive": 0,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": "",
+  "priority_id": 1,## High,
+  "custom_steps_separated": [
+    {
+        "content": "User selects To Card transfer",
+        "expected": "To Card transfer option is displayed"
+    },
+    {
+        "content": "Enters recipient's card number (16 digits)",
+        "expected": "Card number input field accepts exactly 16 digits"
+    },
+    {
+        "content": "Chooses AMD as the currency",
+        "expected": "Only AMD currency option is available for To Card transfer"
+    },
+    {
+        "content": "Enters a valid amount (1000-2,000,000 AMD)",
+        "expected": "Transaction details are displayed with the entered amount and a success message appears after execution"
+    }
+  ],
+  "automation_type": 0
+}
+
+{
+  "title": "To Card Transfer in AMD currency with invalid card number",
+  "custom_steps": "User selects To Card transfer, enters recipient's card number (less than or more than 16 digits), chooses AMD as the currency, and enters a valid amount.",
+  "custom_ispositive": 1,
+  "custom_automation_type": 0,
+  "type_id": 10,
+  "custom_preconds": "",
+  "priority_id": 1,## High,
+  "custom_steps_separated": [
+    {
+        "content": "User selects To Card transfer",
+        "expected": "To Card transfer option is displayed"
+    },
+    {
+        "content": "Enters recipient's card number (less than or more than 16 digits)",
+        "expected": "Error message appears indicating the entered card number is invalid"
+    }
+  ],
+  "automation_type": 0
+}
+INFO:ollama_service:Extracted cases: []
+INFO:ollama_service:Output: Here are the test cases in JSON format:
+
+{
+"title": "To Card Transfer: Only AMD currency allowed",
+"custom_steps": "Enter To Card transfer page, select AMD as currency, click Next",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User selects AMD as the currency.",
+        "expected": "The system only allows AMD as an option and does not allow other currencies."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Exact 16-digit card number",
+"custom_steps": "Enter To Card transfer page, enter a valid 16-digit card number, click Next",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters an exact 16-digit card number.",
+        "expected": "The system accepts only exactly 16-digit card numbers and does not allow shorter or longer ones."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Less than 16 digits",
+"custom_steps": "Enter To Card transfer page, enter a less-than-16-digit card number, click Next",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters a less-than-16-digit card number.",
+        "expected": "The system displays an error message indicating that the card number is invalid due to its length."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: More than 16 digits",
+"custom_steps": "Enter To Card transfer page, enter a more-than-16-digit card number, click Next",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters a more-than-16-digit card number.",
+        "expected": "The system displays an error message indicating that the card number is invalid due to its length."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Minimum allowed amount",
+"custom_steps": "Enter To Card transfer page, enter a valid minimum allowed amount, click Next",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters a valid minimum allowed amount (1000 AMD).",
+        "expected": "The system allows the transfer with the entered amount."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Maximum allowed amount",
+"custom_steps": "Enter To Card transfer page, enter a valid maximum allowed amount, click Next",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters a valid maximum allowed amount (2000000 AMD).",
+        "expected": "The system allows the transfer with the entered amount."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Inactive card",
+"custom_steps": "Enter To Card transfer page, select an inactive card, click Next",
+"custom_ispositive": 1,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User selects an inactive card.",
+        "expected": "The system displays an error message indicating that the card is inactive and cannot be used for transfers."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Confirm transaction details",
+"custom_steps": "Enter To Card transfer page, enter recipient's card number, confirm details, click Execute",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters the recipient's card number and confirms transaction details.",
+        "expected": "The system displays a confirmation message before executing the transfer."
+    }
+],
+"automation_type": 0
+}
+
+{
+"title": "To Card Transfer: Successful transfer",
+"custom_steps": "Enter To Card transfer page, enter recipient's card number, confirm details, click Execute",
+"custom_ispositive": 0,
+"custom_automation_type": 0,
+"type_id": 12,
+"priority_id": 2,
+"custom_steps_separated": [
+    {
+        "content": "User navigates to the To Card Transfer page.",
+        "expected": "The user sees a form for entering the recipient's card number."
+    },
+    {
+        "content": "User enters the recipient's card number and confirms transaction details.",
+        "expected": "The system executes the transfer successfully and displays a success message."
+    }
+],
+"automation_type": 0
+}
+INFO:ollama_service:Extracted cases: [{'title': 'To Card Transfer: Only AMD currency allowed', 'custom_steps': 'Enter To Card transfer page, select AMD as currency, click Next', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User selects AMD as the currency.', 'expected': 'The system only allows AMD as an option and does not allow other currencies.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Exact 16-digit card number', 'custom_steps': 'Enter To Card transfer page, enter a valid 16-digit card number, click Next', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User enters an exact 16-digit card number.', 'expected': 'The system accepts only exactly 16-digit card numbers and does not allow shorter or longer ones.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Less than 16 digits', 'custom_steps': 'Enter To Card transfer page, enter a less-than-16-digit card number, click Next', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User enters a less-than-16-digit card number.', 'expected': 'The system displays an error message indicating that the card number is invalid due to its length.'}], 'automation_type': 0}, {'title': 'To Card Transfer: More than 16 digits', 'custom_steps': 'Enter To Card transfer page, enter a more-than-16-digit card number, click Next', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User enters a more-than-16-digit card number.', 'expected': 'The system displays an error message indicating that the card number is invalid due to its length.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Minimum allowed amount', 'custom_steps': 'Enter To Card transfer page, enter a valid minimum allowed amount, click Next', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User enters a valid minimum allowed amount (1000 AMD).', 'expected': 'The system allows the transfer with the entered amount.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Maximum allowed amount', 'custom_steps': 'Enter To Card transfer page, enter a valid maximum allowed amount, click Next', 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User enters a valid maximum allowed amount (2000000 AMD).', 'expected': 'The system allows the transfer with the entered amount.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Inactive card', 'custom_steps': 'Enter To Card transfer page, select an inactive card, click Next', 'custom_ispositive': 1, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': 'User selects an inactive card.', 'expected': 'The system displays an error message indicating that the card is inactive and cannot be used for transfers.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Confirm transaction details', 'custom_steps': "Enter To Card transfer page, enter recipient's card number, confirm details, click Execute", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': "User enters the recipient's card number and confirms transaction details.", 'expected': 'The system displays a confirmation message before executing the transfer.'}], 'automation_type': 0}, {'title': 'To Card Transfer: Successful transfer', 'custom_steps': "Enter To Card transfer page, enter recipient's card number, confirm details, click Execute", 'custom_ispositive': 0, 'custom_automation_type': 0, 'type_id': 12, 'priority_id': 2, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number."}, {'content': "User enters the recipient's card number and confirms transaction details.", 'expected': 'The system executes the transfer successfully and displays a success message.'}], 'automation_type': 0}]
+INFO:testrail_service:Test case added successfully: {'id': 54652, 'title': 'To Card Transfer: Only AMD currency allowed', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483848, 'updated_by': 1103, 'updated_on': 1754483848, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 1, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User selects AMD as the currency.', 'expected': 'The system only allows AMD as an option and does not allow other currencies.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54653, 'title': 'To Card Transfer: Exact 16-digit card number', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483848, 'updated_by': 1103, 'updated_on': 1754483848, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 2, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User enters an exact 16-digit card number.', 'expected': 'The system accepts only exactly 16-digit card numbers and does not allow shorter or longer ones.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54654, 'title': 'To Card Transfer: Less than 16 digits', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483848, 'updated_by': 1103, 'updated_on': 1754483848, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 3, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User enters a less-than-16-digit card number.', 'expected': 'The system displays an error message indicating that the card number is invalid due to its length.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54655, 'title': 'To Card Transfer: More than 16 digits', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483849, 'updated_by': 1103, 'updated_on': 1754483849, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 4, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User enters a more-than-16-digit card number.', 'expected': 'The system displays an error message indicating that the card number is invalid due to its length.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54656, 'title': 'To Card Transfer: Minimum allowed amount', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483849, 'updated_by': 1103, 'updated_on': 1754483849, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 5, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User enters a valid minimum allowed amount (1000 AMD).', 'expected': 'The system allows the transfer with the entered amount.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54657, 'title': 'To Card Transfer: Maximum allowed amount', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483849, 'updated_by': 1103, 'updated_on': 1754483849, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 6, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User enters a valid maximum allowed amount (2000000 AMD).', 'expected': 'The system allows the transfer with the entered amount.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54658, 'title': 'To Card Transfer: Inactive card', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483849, 'updated_by': 1103, 'updated_on': 1754483849, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 7, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': 'User selects an inactive card.', 'expected': 'The system displays an error message indicating that the card is inactive and cannot be used for transfers.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54659, 'title': 'To Card Transfer: Confirm transaction details', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483850, 'updated_by': 1103, 'updated_on': 1754483850, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 8, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': "User enters the recipient's card number and confirms transaction details.", 'expected': 'The system displays a confirmation message before executing the transfer.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:testrail_service:Test case added successfully: {'id': 54660, 'title': 'To Card Transfer: Successful transfer', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483850, 'updated_by': 1103, 'updated_on': 1754483850, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 9, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': "User enters the recipient's card number and confirms transaction details.", 'expected': 'The system executes the transfer successfully and displays a success message.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}
+INFO:main:Generated test cases: {'id': 54660, 'title': 'To Card Transfer: Successful transfer', 'section_id': 12172, 'template_id': 2, 'type_id': 7, 'priority_id': 2, 'milestone_id': None, 'refs': None, 'created_by': 1103, 'created_on': 1754483850, 'updated_by': 1103, 'updated_on': 1754483850, 'estimate': None, 'estimate_forecast': None, 'suite_id': 1409, 'display_order': 9, 'is_deleted': 0, 'custom_automation_type': 0, 'custom_ispositive': 0, 'custom_webview': None, 'custom_preconds': None, 'custom_steps': None, 'custom_testrail_bdd_scenario': None, 'custom_expected': None, 'custom_steps_separated': [{'content': 'User navigates to the To Card Transfer page.', 'expected': "The user sees a form for entering the recipient's card number.", 'additional_info': '', 'refs': ''}, {'content': "User enters the recipient's card number and confirms transaction details.", 'expected': 'The system executes the transfer successfully and displays a success message.', 'additional_info': '', 'refs': ''}], 'custom_mission': None, 'custom_goals': None}

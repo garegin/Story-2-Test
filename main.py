@@ -35,7 +35,7 @@ app = FastAPI()
 # Determine whether to use mock data by default
 DEFAULT_MOCK = os.getenv("MOCK_ENABLED", "true").lower() == "true"
 
-def generate_test_cases(user_story: str, mock: bool = DEFAULT_MOCK) -> str:
+def generate_test_cases_open_ai(user_story: str, mock: bool = DEFAULT_MOCK) -> str:
     """
     Generate test cases for a given user story using OpenAI or mock data.
     """
