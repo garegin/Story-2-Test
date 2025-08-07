@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO, filename="log.log")
 logger = logging.getLogger(__name__)
 
 
-def ollama_generate_prompt(prompt: str, model: str = "llama3:8b") -> str:
+def ollama_generate_prompt(prompt: str, model: str = "llama3:8b") -> str: ##gpt-oss:20b
     """
     Generate a response from the Ollama API for a given prompt and model.
     """
@@ -95,6 +95,7 @@ def extract_test_cases(text):
         json_str = match.group(1)
         # Match JSON objects that start with { and end with }
         json_blocks = re.findall(r'\{[\s\S]*?\}(?=\s*\{|\s*$)', json_str)
+        logger.info(f"Extracted JSON blocks: {json_blocks}")
         cases = []
         for block in json_blocks:
             try:
@@ -110,6 +111,7 @@ def extract_test_cases(text):
                         }
                         for step in case["custom_steps_separated"]
                     ]
+                logger.info(f"Case: {case}")
                 cases.append(case)
             except Exception as e:
                 print(f"Failed to parse block: {e}\nBlock:\n{block}\n")

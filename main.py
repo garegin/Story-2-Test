@@ -95,7 +95,11 @@ async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
                 title=case.get("title"),
                 custom_steps=case.get("custom_steps", ""),
                 custom_steps_separated=custom_steps_separated,
-                automation_type=case.get("automation_type", 0)
+                automation_type=case.get("automation_type", 0),
+                custom_preconds=case.get("custom_preconds", None),
+                custom_ispositive=case.get("custom_ispositive", 0),
+                priority_id=case.get("priority_id", 2),
+                type_id=case.get("type_id", None)
             )
             # Post the test case to TestRail
             try:
@@ -106,7 +110,9 @@ async def generate_cases(input_data: IssueKeyInput, mock: bool = DEFAULT_MOCK):
     logger.info(f"Generated test cases: {testrail_response}")
     
     #logger.info(f"The test_cases: {test_cases}")
-    result = add_comment_to_jira(input_data.issue_key, "testrail cases generated and added to TestRail. Please check the TestRail for details.")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    comment = f"Test Cases are generated and added to TestRail on {timestamp}. Please review them, and do necessary updates if needed."
+    result = add_comment_to_jira(input_data.issue_key, comment)
     
     #add test trail 
     return {"issue_key": input_data.issue_key, "action":result, "generated_test_cases": test_cases, "testrail_response": testrail_response}
